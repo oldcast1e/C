@@ -6,22 +6,17 @@ struct A{
     char name;
 }AA;
 
-// struct B{
-//     int data;
-//     char name[10];
-// }BB;
 int main(void){
    struct A *stra = &AA;
    struct A *strb ;
-   stra->name = 'S';
+
+   stra->name = 'A';
    stra->data = 1;
 
    strb = stra;
 
-   strb->data = 3;
+   strb->data = 10;
    printf(">%d",stra->data);
 
 
-    
-   
 }

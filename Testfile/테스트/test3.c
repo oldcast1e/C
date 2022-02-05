@@ -1,6 +1,16 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+
+void x(){ }
+
+void y(){ }
+
+void z(){ 
+    x();
+    y();
+}
+
 int main() {
-    for(int i='a';i<='z';i++)printf("%c ",i);
+    z();
 }	
