@@ -6,6 +6,7 @@ int main(){
 
     int A,n,m;//입력받을 정수형 변수 정의
     int (*fp)(int, int);//함수 포인터 선언
+    
     scanf("%d",&A);//입력받기(1)
     void *pa = &A;//void포인터 연결
     //void 포인터를 사용하여 int형 변수에 담긴 값을 화면에 출력한다.
