@@ -111,7 +111,7 @@ int main() {
     // printf("스택의 용량: %d\n",Capacity(head)); 
     printf("스택의 데이터 개수: %d\n",Size(head)); 
     // Clear(head);
-    Print(head);
+    // Print(head);
 
     // ListNode* check = head->next; //순회용 노드 생성
     // while(check != NULL){

@@ -2,9 +2,6 @@
 #include<string.h>
 #include<stdlib.h>
 
-#ifndef ___IntStack
-#define ___IntStack
-
 /*스택을 구현하는 구조체*/
 typedef struct {
     int max; //스택용량
@@ -45,7 +42,9 @@ int Pop(IntStack *stt,int *del){
     if(stt->num <= 0) return -1;
     //스택에서 꺼낼 수 있는 수가 0보다 작거나 같으면 종료
     
-    *del = stt->stk[stt->num --];
+    *del = stt->stk[stt->num -1 ];
+    stt->num  --;
+    printf(">>>팝 데이터: %d\n",*del);
     //인자로 받은 배열이 가리키는 배열의 num 인덱스에 해당하는 데이터 값을 포인터 del의 참조값으로 저장
     //이후 인덱스를 감소하고 종료
     return 0;
@@ -120,7 +119,37 @@ void Terminate(IntStack *stt){
 }
 
 int main(){
-    
-}
+    IntStack stack;
+    if(Initialisze(&stack,64) == -1) {puts("스택 생성 실패");return 1;}
 
-#endif
+    while(1){
+        int menu,x;
+        printf("현재 데이터 수: %d / %d\n",Size(&stack),Capacity(&stack));
+        printf("(1)푸시 (2)팝 (3)피크 (4)출력 (0)종료: ");scanf("%d",&menu);
+
+        if(menu == 0) break;
+        switch(menu){
+            case 1:
+                printf("데이터: ");scanf("%d",&x);
+                if(Push(&stack,x)==-1)puts("푸시에 실패하였습니다.");
+                break;
+
+            case 2:
+                if(Pop(&stack,&x) == -1) puts("팝에 실패하였습니다.");
+                else printf("팝 데이터는 %d입니다.\n",x);
+                break;
+
+            case 3:
+                if(Peek(&stack,&x)==-1)puts("피크에 실패하였습니다.");
+                else printf("피크 데이터는 %d입니다.\n",x);
+                break;
+
+            case 4:
+                Print(&stack);
+                break;
+        }
+
+    }
+    Terminate(&stack);
+    return 0;
+}
