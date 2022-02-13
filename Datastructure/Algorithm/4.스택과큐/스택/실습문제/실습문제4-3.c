@@ -44,7 +44,6 @@ int Pop(IntStack *stt,int *del){
     
     *del = stt->stk[stt->num -1 ];
     stt->num  --;
-    printf(">>>팝 데이터: %d\n",*del);
     //인자로 받은 배열이 가리키는 배열의 num 인덱스에 해당하는 데이터 값을 포인터 del의 참조값으로 저장
     //이후 인덱스를 감소하고 종료
     return 0;
