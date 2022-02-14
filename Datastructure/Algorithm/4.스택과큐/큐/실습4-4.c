@@ -33,18 +33,20 @@ int Initialize(IntQueue *Que,int max){
 
 int EnQue(IntQueue *Que,int data){
     if(Que->num >= Que->max) return -1;
-    /**
-    큐의 현재 데이터 개수가 큐의 최대 용량보다 큰 경우 -1 반환 후 종료
-    >> 현재 데이터 개수가 최대 용량보다 크거나 작으면 더 이상 데이터 추가할 수 없음.
-     */
-    Que ->num ++;
-    //큐의 현재 데이터 개수 증가
-    Que->que[Que->rear ++] = data;
-    /**
-    큐가 가리키는 현재 인덱스에 데이터를 추가하고 
-    rear(후미 인덱스) 값을 증가한다.
-     */
-
+    else{
+        /**
+        큐의 현재 데이터 개수가 큐의 최대 용량보다 큰 경우 -1 반환 후 종료
+        >> 현재 데이터 개수가 최대 용량보다 크거나 작으면 더 이상 데이터 추가할 수 없음.
+        */
+        Que ->num ++;
+        //큐의 현재 데이터 개수 증가
+        Que->que[Que->rear ++] = data;
+        if(Que->rear == Que ->max) Que->rear = 0;
+        /**
+        큐가 가리키는 현재 인덱스에 데이터를 추가하고 
+        rear(후미 인덱스) 값을 증가한다.
+        */
+    }
     return 0;
 }
 
