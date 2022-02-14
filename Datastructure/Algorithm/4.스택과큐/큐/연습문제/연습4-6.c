@@ -60,7 +60,7 @@ int EnQue_front(IntQueue *Que,int data){
         Que ->num ++;
         //큐의 현재 데이터 개수 증가
         Que->front = (Que->front -1 + Que->max) % Que->max;
-        printf("\n<<<<<<<< Que->front = %d>>>>>>>>\n",Que->front);
+        // printf("\n<<<<<<<< Que->front = %d>>>>>>>>\n",Que->front);
         Que->que[Que->front] = data;
     }
     return 0;
@@ -91,7 +91,7 @@ int DeQue_rear(IntQueue *Que,int *data){
     Que->num --;
     //현재 데이터 개수를 1 감소
     //Que->front = (Que->front -1 + Que->max) % Que->max;
-    
+
     if((Que->rear-1) < 0) Que->rear = (Que->rear -1 + Que->max) % Que->max;
     *data = Que->que[Que->rear --];
     //인자로 받은 data에 현재 인덱스의 값을 저장하고 front를 증가 == 현재 인덱스 데이터를 빼냈기 때문
