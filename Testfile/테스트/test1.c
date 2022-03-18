@@ -3,6 +3,8 @@
 #include<stdlib.h>
 
 int main() {
+    printf("%d\n",'A');
+    printf("%c",'A');
 
 }	
 /**
