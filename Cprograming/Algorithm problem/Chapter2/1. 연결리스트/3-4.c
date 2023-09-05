@@ -51,6 +51,8 @@ int main(){
 
     for(int i=0;i<9;i++) NewNode[i]->next = NewNode[i+1];
     for(int i=1;i<9;i++) NewNode[i+1]->pre = NewNode[i];
+    NewNode[0]->pre = head;
+    
     for(int i=0;i<10;i++) NewNode[i]->data = (i+1);
     NewNode[9]->next = NULL;
    
