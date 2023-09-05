@@ -9,7 +9,17 @@ typedef struct ListNode {
 	struct ListNode *next;
 }ListNode;
 
-ListNode* plus(ListNode *head, int value){
+ListNode* Plus(ListNode *head, int value){
+    ListNode *p=(ListNode *)malloc(sizeof(ListNode));
+
+    p->data=value;
+    p->next=pre->next;
+    pre->next=p;
+
+    return head;
+}
+
+ListNode* Insert(ListNode *ptr){
     ListNode *p=(ListNode *)malloc(sizeof(ListNode));
 
     p->data=value;
