@@ -9,12 +9,8 @@ typedef struct ListNode {
 	struct ListNode *next;
 }ListNode;
 
-void Initialize(){
-
-     /*노드를 메모리 동적 할당으로 생성하기*/
-    ListNode* head = (ListNode*)malloc(sizeof(ListNode)); //헤드 노드 생성
-    head->next = NULL;
-
+void Initialize(ListNode *head){
+    
     ListNode* ListNode1 = (ListNode*)malloc(sizeof(ListNode)); //node1 이라는 새로운 노드를 새로 할당
     ListNode1->next = head->next;//node1의 꼬리를 (기존)헤드의 꼬리로 연결
     head->next = ListNode1;
@@ -29,29 +25,29 @@ void Initialize(){
     ListNode3->data = 'D';//node1의 데이터 업데이드
 }
 
-ListNode* Insert(ListNode *new){
+ListNode* Insert(ListNode *head, ListNode *new){
     ListNode* curr = head->next; 
 	while(curr->next != NULL){ //연결리스트 출력
         if((curr->next)->data > new->data){
             new->next = curr->next;
             curr->next = new;
-
             break;
         }
 		// printf(">> %c\n", curr->data);
 		curr = curr->next;
 	}
-    
     return head;
 }
 
-
 int main(){
-   
-    
-    ListNode* new = (ListNode*)malloc(sizeof(ListNode)); //헤드 노드 생성
+    /*노드를 메모리 동적 할당으로 생성하기*/
+    ListNode* head = (ListNode*)malloc(sizeof(ListNode)); //헤드 노드 생성
+    head->next = NULL;
+    Initialize(head);
+
+    ListNode* new = (ListNode*)malloc(sizeof(ListNode)); //node1 이라는 새로운 노드를 새로 할당
     new->data = 'C';
-    Insert(new);
+    Insert(head,new);
 
     /*순회용 노드*/
     ListNode* curr = head->next; 
@@ -61,6 +57,5 @@ int main(){
 	}
 
     free(head);
-	free(ListNode1);
 	return 0;
 }
