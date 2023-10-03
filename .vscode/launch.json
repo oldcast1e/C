@@ -21,8 +21,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspace/C/Cprograming/Algorithm problem/Chapter2/2. 스택",
-      "program": "/workspace/C/Cprograming/Algorithm problem/Chapter2/2. 스택/build/Debug/outDebug",
+      "cwd": "/workspace/C/Cprograming/Code Up",
+      "program": "/workspace/C/Cprograming/Code Up/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
