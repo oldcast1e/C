@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/Algorithm problem/Chapter2/1. 연결리스트/3-1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x0, symBinAddr: 0x100003E50, symSize: 0x5C }
+  - { offsetInCU: 0x89, offset: 0x89, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x0, symBinAddr: 0x100003E50, symSize: 0x5C }
+  - { offsetInCU: 0xDB, offset: 0xDB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x5C, symBinAddr: 0x100003EAC, symSize: 0xD4 }
+...
