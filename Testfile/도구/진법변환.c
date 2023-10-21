@@ -14,6 +14,7 @@ int main(){
         printf("10진수 -> 16진수 : %x",N);
     }
     else if(set == 'o'){
+        
         scanf("%o",&N);
         printf("8진수 -> 10진수 : %d\n",N);
         printf("8진수 -> 16진수 : %x",N);  
