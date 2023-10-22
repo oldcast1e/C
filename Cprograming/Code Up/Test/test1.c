@@ -3,7 +3,11 @@
 #include<stdlib.h>
 
 int main(){
-    int a,b;scanf("%d %d",&a,&b);
-    printf("%d",a|b);
+    int a,b,c;
+    float d,e,f;
+    
+    scanf("%d",&a);
+    // scanf("%d %d",&a,&b);
+    printf("%d",a);
  
 } 
