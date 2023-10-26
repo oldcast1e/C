@@ -7,7 +7,7 @@ int main(){
     float n1,n2;
     char p;
     scanf("%d%c%d",&a,&p,&c);
-    printf(">>%d %c %d\n",a,p,c);
+    // printf(">>%d %c %d\n",a,p,c);
     switch (p){
     case '+': printf("%d",a+c); break;
     case '-': printf("%d",a-c); break;
