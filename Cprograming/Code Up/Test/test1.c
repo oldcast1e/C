@@ -10,7 +10,7 @@ int main(){
     // scanf("%d %d",&a,&b);
     // scanf("%d %d %d",&a,&b,&c);
     // scanf("%d %d %d %d",&a,&b,&c,&d);
-    // printf("%d",cnt);
+    printf("%d",cnt);
     //for(int i=0;i<cnt;i++)
  
 } 
