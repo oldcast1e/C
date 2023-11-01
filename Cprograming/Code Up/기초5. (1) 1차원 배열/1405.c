@@ -12,8 +12,11 @@ int main(){
 
     for(int i=0;i<a;i++)scanf("%d",&num[i]);
 
-    for(int i=0;i<a;i++)printf("%d\n",num[i]);
-    for(int i=0;i<a;i++)printf("%d\n",num[i]);
+    for(int i=0;i<a;i++){
+        
+        printf("%d\n",num[i]);
+    }
+    
  
 } 
 /*
