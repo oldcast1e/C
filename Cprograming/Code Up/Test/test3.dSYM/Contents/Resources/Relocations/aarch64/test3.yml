@@ -2,6 +2,7 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/apple/Desktop/C/Cprograming/Code Up/Test/test3'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F64, symSize: 0x34 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F64, symSize: 0x34 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _bin_search2, symObjAddr: 0x0, symBinAddr: 0x100003B40, symSize: 0xE0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _bin_search2, symObjAddr: 0x0, symBinAddr: 0x100003B40, symSize: 0xE0 }
+  - { offsetInCU: 0xBB, offset: 0xBB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xE0, symBinAddr: 0x100003C20, symSize: 0x26C }
 ...

@@ -7,14 +7,13 @@ int main(){
     int num[100];
     char arr[100];
     float n1,n2;
-    
-    scanf("%d",&a);
-
-    for(int i=0;i<a;i++)scanf("%d",&num[i]);
-
-    for(int i=0;i<a;i++)printf("%d\n",num[i]);
-    for(int i=0;i<a;i++)printf("%d\n",num[i]);
- 
+    //fgets(arr, 101, stdin);
+    // scanf("%d",&a);
+    // scanf("%d %d",&a,&b);
+    // scanf("%d %d %d",&a,&b,&c);
+    // scanf("%d %d %d %d",&a,&b,&c,&d);
+    printf("%d",'b'-'a');
+    //for(int i=0;i<cnt;i++)
 } 
 /*
 
