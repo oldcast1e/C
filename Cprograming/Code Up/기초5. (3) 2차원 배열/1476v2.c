@@ -8,7 +8,7 @@ int main(){
     
     scanf("%d %d",&a,&b);
 
-    int cnt_a,cnt_b=b-1,cnt=0;
+    int cnt_a=0,cnt_b=1,cnt_c=a-1;
     while(val<=a*b){
 
         if(cnt_a <= a-1){
@@ -19,17 +19,28 @@ int main(){
             }
             cnt_a ++;
         }
-        else if(cnt_a > a-1){
-            for(int i=0;i<cnt_b;i++){
-                dnum[a-1-i][b-cnt_b+i] = val;
-                printf("||dnum[%d][%d] = %d\n",a-1-i,b-cnt_b+i,val);
+        else if(cnt_a > a-1 && cnt_b <= a){
+            for(int i=0;i<a;i++){
+                dnum[a-1-i][i+cnt_b] = val;
+                printf("dnum[%d][%d] = %d\n",a-1-i, i+cnt_b ,val);
+                printf("cnt_b = %d\n",cnt_b);
                 val ++;
             }
-            cnt_b --;
-        
+            cnt_b++;
         }
-        else val ++; 
+        else if(cnt_b > a){
+            for(int i=0;i<cnt_c;i++){
+                dnum[a-1-i][b-cnt_c+i] = val;
+                printf("=>dnum[%d][%d] = %d\n",a-1-i, b-cnt_c+i ,val);
+                val ++;
+            }
+            // a--;
+            cnt_c --;
+        }
+
+        // else {printf("else>>\n"); val++; }
         // else if(cnt_a == a-1)
+    }
 /*
 5 10
  1  3  6 10 15 20 29 37 44 50 
@@ -42,7 +53,7 @@ cnt_a: 5 | cnt_b: 4
 */
         
 
-    }
+    
     for(int i=0;i<a;i++){
         for(int j=0;j<b;j++)printf("%2d ",dnum[i][j]);
         printf("\n");

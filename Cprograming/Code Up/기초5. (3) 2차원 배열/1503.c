@@ -3,39 +3,47 @@
 #include<stdlib.h>
 
 int main(){
-    int a,b,c,d,cnt=1,rev=0;
+    int a,cnt=0,val = 1,dir=0;
     int num[100];
-    char arr[100];
-    float n1,n2;
+    int dnum[100][100];
     //fgets(arr, 101, stdin);
     scanf("%d",&a);
-    // scanf("%s",arr);
-    // for(int i=0;i<(int)strlen(arr);i++)
-    for(int i=1;i<=a*a;i++){
-        if(i>=a*a) break;
-        else if(rev == 0 ){
-            for(int j=i;j<i+a;j++){printf("%d ",j);}
-            //1  ~ 1+3-1(3) , 현재 i = 1
-            rev = 1;
-            i += a -1;//1 + 3 = 4
-            printf("\n");
-        }
-        else if(rev == 1){
-            for(int j= i + a - 1;j >= i;j--){printf("%d ",j);}
+    int cnt_i=0,cnt_j=0;
+    while(1){
+        if(val == a*a) break;
 
-            rev = 0;
-            i += a-1;
-            printf("\n");
+        if(a > cnt_i) dir = 1;
+        else {
+            printf("방향 전환\n");
+            dir = 0;
+            cnt_i --;
+            cnt_j++;
         }
+
+        if(dir == 1){
+            dnum[cnt_i][cnt_j] = val; 
+            printf("[순방향] dnum[%d][%d] = %d\n",cnt_i,cnt_j,val);
+            val++;
+            cnt_i ++;
+        }
+        else if(dir == 0){
+            dnum[cnt_i][cnt_j] = val; 
+            printf("<역방향> dnum[%d][%d] = %d\n",cnt_i,cnt_j,val);
+            val++;
+            cnt_i --;
+        }
+        // else if(n > cnt_i)cnt_i ++;
     }
+    /*
+    for(int i=0;i<a;i++){
+        for(int j=0;j<a;j++)printf("%d ",dnum[i][j]);
+        printf("\n"); cnt++;
+    }
+    */
+    
+
     
 } 
 /*
-1 2 3
-6 5 4
-7 8 9
 
-1 2 3 4
-8 7 6 5
-9 10 11 12
 */

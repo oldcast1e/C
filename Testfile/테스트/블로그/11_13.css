@@ -1,0 +1,111 @@
+/* 목차 스타일 */
+.book-toc {
+    position: relative;
+    width: fit-content;
+    
+    border: 1px solid #b0d197;
+    /* // 배경테두리를 설정하는 부분이다. 
+    // 1px은 테두리 굵기, 
+    // solid는 실선으로 표시,
+    // #~는 테두리 색상을 나타낸다. 
+    // 테두리를 없애고 싶다면 1px을 0px로 변경한다. */
+    
+    padding: 10px 20px 10px 15px;
+    z-index: 1;
+}
+.book-toc:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    background-color: #b0d197;
+    /* //배경색상을 설정하는 부분이다.  */
+    
+    z-index: -1;
+    opacity: 0.1;
+}
+#toc > li {
+    padding-left: 0;
+    text-indent: 0;
+    
+    /*list-style-type: disc;*/
+    /* //점을 표시하는 부분이다. 점을 다른 모양으로 변경하고자 하면 위에처럼 주석처리해준다 */
+    
+    margin-bottom: 10px;
+}
+
+/*점을 다른모양으로 변경하고자 하면 아래내용 추가*/
+#toc > li::marker {
+    content: "💚▶";
+    /* //" " 안에 원하는 기호나 모양을 추가한다. 공백으로 놔둘수도 있다. */
+    
+    color: #FF00DD;
+    /* //" " 안에 이모지가 아닌 글씨가 들어간다면 색상을 지정할 수 있다. */
+    
+	font-size: 13px;
+    /* //" " 가 표시되는 크기를 지정한다. px은 그대로 놔두고 수치만 변경한다. */
+}
+/* // 두번째 점 설정부분 */
+#toc > li > ul > li {
+    font-size: 0.87em;
+    
+    padding-left: 0;
+    /* //두번째 점의 들여쓰기 정도를 지정할 수 있다. 
+    // 0px~부터 시작해서 높여준다. */
+    
+    text-indent: 0;
+    /*list-style-type: disc;*/
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+#toc > li > ul > li::marker {
+    content: "♠ ";
+	color: #00D8FF;
+	font-size: 13px;
+}
+
+
+/* //세번째 점 설정부분 */
+#toc > li > ul > li > ul > li {
+    font-size: 0.87em;
+      
+    padding-left: 0;
+    /* //세번째 점의 들여쓰기 정도를 지정할 수 있다. 
+    // 0px~부터 시작해서 높여준다. */
+    
+    text-indent: 0;
+    /*list-style-type: disc;*/
+    margin-bottom: 0;
+    margin-top: 3px;
+}
+#toc > li > ul > li > ul > li::marker {
+    content: "🎄 ";
+	font-size: 13px;
+}
+/* 글 제목1 스타일 */
+.article-view h2 {
+	text-align: left;
+	border-left: #517135 12px solid;
+	/* //왼쪽 테두리를 설정한다
+	//12px은 테두리의 굵기
+	//solid는 실선
+	//#~ 는 색상을 지정할 수 있다.
+     */
+	border-bottom: 1px solid #517135;
+	/* //아래쪽 테두리를 설정한다
+	//1px은 테두리의 굵기
+	//solid는 실선
+	//#~ 는 색상을 지정할 수 있다.
+	 */
+	/*배경 설정하고 싶을 때 아래내용을 추가한다*/
+	background-color: #FAED7D;
+	
+	padding: 3px 0 10px 10px;
+	margin: 30px 0 20px 0;
+}
+
+
+/* 제목2(h3), 제목3(h4) 스타일도 제목1(h2) 스타일과 비슷하게 작성되어있다 */

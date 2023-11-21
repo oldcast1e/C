@@ -20,7 +20,12 @@
  * 12. Media Screen - Mobile
  *
  */
-
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Type Selector Reset */
 body {
     -webkit-font-smoothing: antialiased;
@@ -142,16 +147,16 @@ a {
 
 /* Layout Selector */
 #wrap{
-	max-width: 1060px;
+	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
 }
 .wide-layout #wrap{
-	max-width: 1160px;
+	max-width: 1600px;
 }
 .ultra-wide-layout #wrap{
-	max-width: 1260px;
+	max-width: 1600px;
 }
 #wrap > .inner{
 	float: left;
@@ -461,7 +466,7 @@ a {
 	height: 42px;
 }
 .sidebar .search > .inner{
-	max-width: 280px;
+	max-width: 3000px;
 	height: 42px;
 	color: #fff;
 	margin: 0 auto;
@@ -503,10 +508,11 @@ a {
 .sidebar .search input::-ms-input-placeholder {
   color: #000;
 }
-
+/*블로그 제목*/
 #header > .title h1 {
 	text-align: center;
-	font-size: 1.5em;
+	font-family: 'JalnanGothic';
+	font-size: 2em;
 	line-height: 1.8em;
 	color: #000;
 }
@@ -762,7 +768,7 @@ a {
 
 /* Layout Content Area */
 .container{
-	max-width: 1260px;
+	max-width: 1600px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
@@ -2075,6 +2081,102 @@ a {
 	top:95px;
 	margin:0;
 }
+/*>>>>>>>>>>>>>코드블럭>>>>>>>>>>>>>*/
+pre {
+  position: relative;
+}
+pre::after {
+  content: attr(data-ke-language);
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: #cfd2d1;
+  font-size: 12px;
+}
+.hljs {
+  display: flex !important;
+  flex-direction: column;
+  padding: 0 !important;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgb(0 0 0 / 0%);
+  color: #cfd2d1;
+  background-color: #343131;/*아님*/
+  font-family: Menlo, Courier, monospace;
+}
+.hljs .line {
+  counter-increment: line-idx;
+  line-height: 1.5;
+}
+.hljs .line:hover {
+  background-color: #c6c6c6a4;
+}
+.hljs .line:hover::before {
+  color: #cfd2d1;/*코드위로 마우스*/
+}
+.hljs .line::before {
+  content: counter(line-idx);
+  width: 24px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 16px;
+  font-size: 0.8rem;
+  color: #747a7a;
+}
+.hljs .code-header {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  background-color: rgb(90, 140, 175); /*코드 헫,*/
+  border-radius: 8px 8px 0 0;
+}
+.hljs .code-header .btn {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+.hljs .code-header .btn.red {
+  background-color: #f5655b;
+}
+.hljs .code-header .btn.yellow {
+  background-color: #f6bd3b;
+}
+.hljs .code-header .btn.green {
+  background-color: #43c645;
+}
+.hljs .code-body {
+  max-height: 600px;
+  margin: 32px 8px;
+  overflow: auto;
+}
+.hljs .code-body::-webkit-scrollbar {
+  width: 12px;
+}
+.hljs .code-body::-webkit-scrollbar-thumb {
+  background-color: rgb(1 2 3 / 80%);
+  border-radius: 4px;
+}
+.hljs .code-body::-webkit-scrollbar-corner {
+  display: none;
+}
+.hljs .copy-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 0;
+  width: 64px;
+  border-radius: 4px;
+  margin-left: auto;
+  transition: 0.2s background-color;
+}
+.hljs .copy-btn:hover {
+  background-color: #555152;/*아님*/
+}
+/*<<<<코드블럭 종료>>>>*/
+/*--------*/
 .pagination .inner{
 	height: 100%;
 	box-sizing: border-box;
@@ -2890,7 +2992,7 @@ a {
 	#header.on .category-menu, .category-top #header.on .category-menu{
 		display: block;
 		border-bottom: 1px solid #ddd;
-		box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+		box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.25);
 		background-color: rgba(255,255,255,0.8);
 	}
 	.category-top #header .category-menu{
@@ -3163,4 +3265,20 @@ a {
 		border: 0;
 		margin: 0;
 	}
+	/* 자동 목차 스타일 시작 */
+	.book-toc p {
+		font-weight: bold;                
+		/* 글씨를 굵게 처리하는 부분이다. 굵게 처리하지 않고싶으면 문구를 아예 삭제하자 */
+		
+		font-size: 12em !important;      
+		/* 글씨 크기를 조절하는 부분이다. em앞의 수치부분만 자신이 원하는 만큼 줄이거나 높이면 된다 */
+		
+		color: #396120;                   
+		/* 글씨 색상을 설정하는 부분이다. 원하는 색상을 입력하자 */
+	}
+
+
+/* 자동 목차 스타일 끝 */
+	
+
 }
