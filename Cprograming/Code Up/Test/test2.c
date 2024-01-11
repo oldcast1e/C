@@ -4,7 +4,7 @@
 
 int main(){
     int a,b,c,d,cnt=0;
-    int num[100];
+    int num[100]={1,2,3,4,5};
     int dnum[100][100];
     char arr[100];
     char darr[100][100];
@@ -20,7 +20,7 @@ int main(){
         printf("\n"); cnt++;
     }
     */
-    
+    printf("%d",(int)(sizeof(num)/sizeof(num[0])));
 
     
 } 
