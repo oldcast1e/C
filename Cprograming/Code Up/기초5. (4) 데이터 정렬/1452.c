@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-
+//quick 정렬 (퀵 정렬)
 void quickSort(int arr[], int L, int R){
     int left = L, right = R,tmp;
     int Piv = arr[(L+R)/2];
