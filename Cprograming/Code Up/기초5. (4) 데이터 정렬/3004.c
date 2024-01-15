@@ -24,12 +24,24 @@ void quickSort(int arr[], int L, int R){
 }
 
 int main(){
-    int n,num[100000];
+    int n,num[100000],cnt=0;
+    int ogn[100000];
     scanf("%d",&n);
-    for(int i=0;i<n;i++)scanf("%d",&num[i]);
+    for(int i=0;i<n;i++){scanf("%d",&num[i]);ogn[i]=num[i];}
     quickSort(num,0,n-1);
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(ogn[i]==num[j]){
+                ogn[i] = j;
 
-    for(int i=0;i<n;i++)printf("%d ",num[i]);
+                break;
+            }
+        }
+    }
+
+    for(int i=0;i<n;i++)printf("%d ",ogn[i]);
+    // for(int i=0;i<n;i++)printf("%d ",num[i]);
 }
 /*
 5
