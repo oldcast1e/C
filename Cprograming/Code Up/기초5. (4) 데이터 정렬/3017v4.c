@@ -53,7 +53,7 @@ void quickSort_R(int arr[][3], int L, int R,int key){
 
 int main(){
     int N;
-    int num[1000][3];
+    int num[1001][3];
     scanf("%d",&N);
     // for(int i=0;i<(int)strlen(arr);i++)
     for(int i=0;i<N;i++){
