@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/2024/5. 재귀/5-1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _fac, symObjAddr: 0x0, symBinAddr: 0x100003E88, symSize: 0x64 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _fac, symObjAddr: 0x0, symBinAddr: 0x100003E88, symSize: 0x64 }
+  - { offsetInCU: 0x77, offset: 0x77, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x64, symBinAddr: 0x100003EEC, symSize: 0x60 }
+...

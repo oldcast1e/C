@@ -29,7 +29,6 @@ int main(){//메인 함수
     printf("lager : %.1lf + %.1lfi",rst_dir->n,rst_dir->i);
     // rst = add(st1,st2);//결과값 저장
     // printf("%.1lf + %.1lfi",rst.n,rst.i);//결과 출력
-
 }
 //2.3 4.5
 //3.4 5.0
