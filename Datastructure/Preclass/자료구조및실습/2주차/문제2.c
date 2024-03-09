@@ -6,7 +6,7 @@ int mostOnes(int **dnum, int num){
     int *index = (int*)malloc(sizeof(int)*num);
     // for(int i=0;i<num;i++)index[i] = 101;
 
-    int i=0,j=0,min = 101,cnt=0;
+    int i=0,j=0,min = 101,cnt=0,max=-1;
     while(num-1 >= i){
         if(dnum[i][j]==1) {if(j==num-1)return(i); 
             printf("[1] i = %d | j = %d \n",i,j);

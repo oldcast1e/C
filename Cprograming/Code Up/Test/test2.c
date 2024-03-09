@@ -4,7 +4,8 @@
 #include<math.h>
 int main(){
     char dchar[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    printf("%c",dchar[10]);
+    // printf("%c",dchar[10]);
+    printf("%d",3408%1000);
     
 
     
