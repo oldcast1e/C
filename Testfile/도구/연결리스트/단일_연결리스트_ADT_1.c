@@ -42,11 +42,11 @@ ListNode* delete(ListNode *head, int rank){//구조체 함수
    
     ListNode* rear = head; //순회용 노드 생성
     for(int i=0;i<rank-1;i++)rear= rear->next;//삭제할 노드의 뒤까지 반복
-    // free(rear->next);
-    (rear->next) = (rear->next)->next;
+    ListNode* tmp = rear->next; printf("데이터 [%d]를 삭제합니다.\n",tmp->data);
+    //삭제할 노드는 저장한 노드의 다음 노드이다. 그 노드를 임시로 저장한다. 
+    rear->next = tmp->next; free(tmp);
     // (삭제할 노드-1)의 다음 노드는 (삭제할 노드의 + 1)
     return head;
-    
 }
 
 void print(ListNode *head){
@@ -65,14 +65,9 @@ int main(){
     end = NULL;// end->next = end; 
     head->next = end; 
 
-    int rank=0,value;
-    for(int i=0;i<5;i++){
-        add(head,rank,10* (i+1)); rank++;
-    }
-    delete(head,3);
-    
-
-
+    int cnt = 10;
+    for(int i=0;i<10;i++)add(head,i,10*(i+1));
+    print(head); delete(head,5);
     print(head);
 
     free(head);free(end);

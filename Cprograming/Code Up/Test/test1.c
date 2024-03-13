@@ -8,7 +8,7 @@ int main(){
 
     /*이중동적*/
     int **dnum = (int **)malloc(sizeof(int*)*n);
-    for(int i=0;i<n;i++) *dnum = (int *)malloc(sizeof(int)*n);
+    for(int i=0;i<n;i++) dnum[i] = (int *)malloc(sizeof(int)*n);
     
     for(int i=0;i<n;i++)scanf("%d",&num[i]);
     for(int i=0;i<n;i++)printf("%d",num[i]);

@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Testfile/도구/연결리스트/단일_연결리스트_ADT_2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x0, symBinAddr: 0x1000039D4, symSize: 0x15C }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x0, symBinAddr: 0x1000039D4, symSize: 0x15C }
+  - { offsetInCU: 0x124, offset: 0x124, size: 0x8, addend: 0x0, symName: _delete, symObjAddr: 0x15C, symBinAddr: 0x100003B30, symSize: 0x94 }
+  - { offsetInCU: 0x192, offset: 0x192, size: 0x8, addend: 0x0, symName: _get, symObjAddr: 0x1F0, symBinAddr: 0x100003BC4, symSize: 0xF4 }
+  - { offsetInCU: 0x21C, offset: 0x21C, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x2E4, symBinAddr: 0x100003CB8, symSize: 0x7C }
+  - { offsetInCU: 0x24E, offset: 0x24E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x360, symBinAddr: 0x100003D34, symSize: 0x1B0 }
+...
