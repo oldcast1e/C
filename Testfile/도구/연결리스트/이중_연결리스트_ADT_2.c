@@ -30,10 +30,22 @@ ListNode* add(ListNode *head, int rank, int value){//구조체 함수
         ListNode *p=(ListNode *)malloc(sizeof(ListNode));//추가할 노드를 동적할당한다.
         // printf("curr로 확인한 %c번째 노도의 값:[%c]\n",rank,curr->data);
         p->data = value;//a
-        p->pre = curr;
-
+        curr = p->pre;
+        
         p->next = (curr->next);
-        (curr->next)= p;
+        (curr->pre)= p;
+        
+        p->pre = curr; 
+        curr->next = p;
+        /*
+        u -> p 에서 u -> v -> p
+        Algorithm add(p, e) : {insert e before p}
+        Create a new node v
+        v -> element = e
+        u = p->prev
+        v -> next = p; p -> prev = v; {linke in v befoer p}
+        v -> prev = u; u -> next = v; {linked in after u}
+        */
         return head; //다음 노드의 위치를 반환함.
     }
 
