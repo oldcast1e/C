@@ -18,3 +18,20 @@ int main(){
     hanoi(num,'A','C','B');
     // printf("재귀 횟수: %d",rst);
 }
+/*
+A B
+A C
+B C
+A B
+C A
+C B
+A B
+A C
+B C
+B A
+C A
+B C
+A B
+A C
+B C
+*/

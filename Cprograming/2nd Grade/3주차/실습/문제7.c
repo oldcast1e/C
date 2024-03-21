@@ -7,24 +7,27 @@
 
 ◦ 문자열의 길이는 최대 100이고, 문자 검사 시 대소문자를 구별한다.
 */
-char arr[101];
-int sum  = 0;
-int count(char ipt, int len){
+
+int count(char *arr,char ipt, int len, int *psum){
     if(len >= 0){
         if(arr[len] == ipt) {
-            sum += 1;
+            *psum += 1;
             // printf("%d -> %c\n",len,arr[len]);
         }
         len --;
-        return count(ipt,len);
+        return count(arr,ipt,len,psum);
     }
-    return sum;
+    return *psum;
 }
 int main(){
     char ipt;
-    scanf("%s",arr);getchar();scanf("%c",&ipt);
+    int sum  = 0,*psum = &sum;
+    char *arr = (char *)malloc(sizeof(char)*101);
+    scanf("%s",arr);getchar();
+    
+    scanf("%c",&ipt);
     int len  = (int)strlen(arr) - 1;
-    printf("%d",count(ipt,len));
+    printf("%d",count(arr,ipt,len,psum));
 } 
 /*
 sheIsAStudent

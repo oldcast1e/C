@@ -6,14 +6,8 @@ long long int rFibonacci(int n){
     else if (n == 1) return 1;
     else {return rFibonacci(n - 1) + rFibonacci(n - 2);}
 }
-
 int main(){
     long long int n; scanf("%lld",&n);
     printf("계산결과: %lld\n",rFibonacci(n));
     printf("반복횟수: %lld",cnt);
-} 
-/*
-50
-계산결과: 12586269025
-반복횟수: 40730022147
-*/
+}
