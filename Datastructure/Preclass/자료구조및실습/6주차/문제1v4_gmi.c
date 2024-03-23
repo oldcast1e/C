@@ -9,7 +9,7 @@ typedef struct Node {
 } Node;
 
 // Function to create a new node
-Node* getnode() {
+Node* getNode() {
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->coef = 0;
     newNode->exp = 0;
@@ -18,8 +18,11 @@ Node* getnode() {
 }
 
 // Function to append a term to a polynomial
+/*
+다항식 k의 마지막 항
+*/
 void appendTerm(Node** result, int coef, int exp) {
-    Node* temp = getnode();
+    Node* temp = getNode();
     temp->coef = coef;
     temp->exp = exp;
     temp->next = (*result)->next;
@@ -28,7 +31,7 @@ void appendTerm(Node** result, int coef, int exp) {
 
 // Function to add two polynomials
 Node* addPoly(Node* x, Node* y) {
-    Node* result = getnode();  // Create a new result polynomial
+    Node* result = getNode();  // Create a new result polynomial
 
     Node* i = x->next;  // Pointer to the first term of x (skip the header)
     Node* j = y->next;  // Pointer to the first term of y (skip the header)
@@ -75,7 +78,7 @@ Node* addPoly(Node* x, Node* y) {
 }
 
 // Function to print a polynomial (for testing purposes)
-void printPoly(Node* head) {
+void printNode(Node* head) {
     Node* temp = head->next;
     while (temp) {
         printf("%d x^%d ", temp->coef, temp->exp);
@@ -88,27 +91,33 @@ void printPoly(Node* head) {
 }
 
 int main() {
-    // Create two sample polynomials
-    Node* x = getnode();
-    appendTerm(&x, 2, 3);
-    appendTerm(&x, 1, 1);
-
-    Node* y = getnode();
-    appendTerm(&y, 3, 2);
-    appendTerm(&y, 5, 0);
+    int n,m,t_coe,t_exp;
+    Node* xlist = getNode(); scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d %d",&t_exp,&t_coe);
+		appendTerm(&xlist,t_exp,t_coe);
+    } 
+    Node* ylist = getNode(); scanf("%d",&m);
+    for(int i=0;i<m;i++){
+        scanf("%d %d",&t_exp,&t_coe);
+		appendTerm(&ylist,t_exp,t_coe);
+    } 
 
     // Print the original polynomials
-    printf("Polynomial x: ");
-    printPoly(x);
-    printf("Polynomial y: ");
-    printPoly(y);
+    printf("Polynomial x: ");printNode(xlist);
+    printf("Polynomial y: ");printNode(ylist);
 
     // Add the polynomials
-    Node* result = addPoly(x, y);
+    Node* result = addPoly(xlist, ylist);
 
     // Print the resulting polynomial
-    printf("Resultant polynomial: ");
-    printPoly(result);
+    printf("Resultant polynomial: ");printNode(result);
 
     return 0;
 }
+/*
+3
+5 3 3 2 3 1
+3
+2 6 2 3 1 0
+*/
