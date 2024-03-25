@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure to represent a term in a polynomial
 typedef struct Node {
     int coef;  // Coefficient of the term
     int exp;  // Exponent of the term
@@ -23,13 +22,6 @@ Node* getNode() {
     return newNode;
 }
 void printNode(Node* head);
-// Function to append a term to a polynomial
-/*
-다항식 k의 마지막 항
-
-하나의 연결리스트의 각 노드는 차수의 내림차순 순으로 유지하고, 
-계수가 0인 항의 노드는 유지하지 않음
-*/
 
 void appendTerm(Node** result, int coef, int exp) {
     
@@ -84,19 +76,6 @@ Node* addPoly(Node* x, Node* y) {
     return result;  // Return the resulting polynomial
 }
 
-// Function to print a polynomial (for testing purposes)
-// void printNode(Node* head) {
-//     Node* temp = head->next;
-//     while (temp) {
-//         printf("%d x^%d ", temp->coef, temp->exp);
-//         if (temp->next) {
-//             printf(" + ");
-//         }
-//         temp = temp->next;
-//     }
-//     printf("\n");
-// }
-
 void printNode(Node* head) {
     Node* temp = head->next;
     while (temp) {
@@ -131,22 +110,8 @@ int main() {
         appendTerm(&prt,t_exp,t_coe);
     }
 
-    // printf("Polynomial x: ");printNode(xlist);
-    // printf("Polynomial x: ");printNode(ylist);
-
     Node* result = addPoly(xlist, ylist);
     // printf("Resultant polynomial: ");
     printNode(result);
     return 0;
 }
-/*
-3
-5 3 3 2 3 1
-3
-2 6 2 3 1 0
-
-2
-2 7 3 0
-3
--3 10 3 7 -3 0
-*/
