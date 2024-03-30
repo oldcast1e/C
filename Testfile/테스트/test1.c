@@ -14,8 +14,8 @@ int main(){
     for(int i=0;i<n;i++)scanf("%d",&num[i]);
     for(int i=0;i<n;i++)printf("%d",num[i]);
 
-    for(int i=0;i<a;i++){
-        for(int j=0;j<a;j++)printf("%d ",dnum[i][j]);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++)printf("%d ",dnum[i][j]);
         printf("\n"); cnt++;
     }
 
@@ -23,4 +23,12 @@ int main(){
 
 } 
 /*
+if(same == len_small){
+        printf("rst= %d\n",0);
+    }
+    else printf("rst= %d\n",etc);
+    // rst = (same == len_small)?0:etc;
+    // printf("rst= %d\n",rst);
+    // return rst;
+    return 0;
 */

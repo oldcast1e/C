@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+실행 가능 확인 24.03.27
+*/
 typedef struct Node {
     //연결리스트 본체: 가지고 있는 데이터 값과 전/후방 연결위치 저장
 	int data;
 	struct Node* next;
-	struct Node* prev;
+	struct Node* pre;
 }Listnode;
 
 typedef struct list {
     //리스트의 정보 :  리스트의 헤드노드와 테일 노드의 설정 구조체
 	int size;
 	Listnode* head;
-	Listnode* trail;
+	Listnode* tail;
 }list_info;
 
 void add(list_info* list,int rank,char data)
@@ -21,9 +24,9 @@ void add(list_info* list,int rank,char data)
         /*
         rank위치까지반복(curr) 
         -> curr은 새로 생성할 new의 다음 노드가 되어야함.: new->next = curr;
-        -> curr의 뒷 노드는 new의 뒷 노드가 되어야함: new->prev = curr->prev;
-        -> curr의 뒷 노드의 다음 노드는 new가 되어야함: (curr->prev)->next = new;
-        -> curr의 뒷 노드는 new가 되어야함: curr->prev = new;
+        -> curr의 뒷 노드는 new의 뒷 노드가 되어야함: new->pre = curr->pre;
+        -> curr의 뒷 노드의 다음 노드는 new가 되어야함: (curr->pre)->next = new;
+        -> curr의 뒷 노드는 new가 되어야함: curr->pre = new;
         */
 		curr = curr->next;
 	}
@@ -31,9 +34,9 @@ void add(list_info* list,int rank,char data)
 	
     new->data = data;
 	new->next = curr;
-	new->prev = curr->prev;
-	(curr->prev)->next = new;
-	curr->prev = new;
+	new->pre = curr->pre;
+	(curr->pre)->next = new;
+	curr->pre = new;
 	list->size++;
 
 }
@@ -48,8 +51,8 @@ void delete(list_info* list,int rank)
     1. "지울 노드의 뒷 노드"의 다음 노드는 "지울 노드의 다음 노드"가 되어야함.
     2. " '지울 노드의 다음 노드'의 '뒷 노드'"는 "지울 노드의 이전 노드"가 되어야함
     */
-	(del->prev)->next = del->next;
-	(del->next)->prev = del->prev;
+	(del->pre)->next = del->next;
+	(del->next)->pre = del->pre;
 	list->size--;
 }
 
@@ -63,7 +66,7 @@ void get(list_info* list,int rank) {
 
 void print(list_info* list) {
 	Listnode* p = list->head->next;
-	while (p != list->trail) { 
+	while (p != list->tail) { 
 		printf("%c", p->data);
 		p = p->next;
 	}
@@ -74,11 +77,11 @@ int main()
 {
 	list_info* list = (list_info*)malloc(sizeof(list_info));
 	list->head = (Listnode*)malloc(sizeof(Listnode));
-	list->trail = (Listnode*)malloc(sizeof(Listnode));
-	list->head->prev = NULL;
-	list->head->next = list->trail;
-	list->trail->prev = list->head;
-	list->trail->next = NULL;
+	list->tail = (Listnode*)malloc(sizeof(Listnode));
+	list->head->pre = NULL;
+	list->head->next = list->tail;
+	list->tail->pre = list->head;
+	list->tail->next = NULL;
 	list->size = 0;
 
 	int n;
@@ -112,3 +115,17 @@ int main()
 	}
 	return 0;
 }
+/*
+9
+A 1 D
+A 2 a
+A 3 Y
+D 1 
+P
+G 3 
+A 1 S
+P
+G 3
+
+
+*/

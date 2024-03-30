@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/Preclass/자료구조및실습/6주차/풀이과정/문제1v15"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _appendTerm, symObjAddr: 0x0, symBinAddr: 0x100003ABC, symSize: 0x88 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _appendTerm, symObjAddr: 0x0, symBinAddr: 0x100003ABC, symSize: 0x88 }
+  - { offsetInCU: 0xD8, offset: 0xD8, size: 0x8, addend: 0x0, symName: _addPoly, symObjAddr: 0x88, symBinAddr: 0x100003B44, symSize: 0x220 }
+  - { offsetInCU: 0x146, offset: 0x146, size: 0x8, addend: 0x0, symName: _printNode, symObjAddr: 0x2A8, symBinAddr: 0x100003D64, symSize: 0x80 }
+  - { offsetInCU: 0x178, offset: 0x178, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x328, symBinAddr: 0x100003DE4, symSize: 0x188 }
+...
