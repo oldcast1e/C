@@ -91,7 +91,7 @@ int main(){
         int rst = subset(list1,list2);
         printf("%d",rst);
     }
-    else if(N==0 && M!=0)printf("%d",0);
+    else if((N==0 && M!=0) || (N==0 && M==0))printf("%d",0);
     else if(N!=0 && M==0)printf("%d",tmp);
 } 
 /*
