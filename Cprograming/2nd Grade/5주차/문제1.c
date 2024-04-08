@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 typedef struct node {
-	int coef; // 차수
-	int exp; /// 계수
-	struct node* next; // 다음 노드 저장
+	int coef;
+	int exp;
+	struct node* next;
 }listnode;
 
 void appendTerm(listnode* list,int c,int e) {
@@ -37,19 +37,15 @@ listnode* addPoly(listnode* list1, listnode* list2) {
 
 	int sum_coef;
 	while ((fir != NULL) && (sec != NULL)) {
-		// 첫 번째 다항식과 두 번째 다항식둘다 빈 노드가 아닌 경우
 		if (fir->exp > sec->exp) {
 			appendTerm(rst, fir->coef, fir->exp);
-			//더 차수가 높은 항을 다음 항으로 이동
 			fir = fir->next;
 		}
 		else if (fir->exp < sec->exp) {
-			//더 낮은 지수를 사용하여 y에 항 추가
 			appendTerm(rst, sec->coef, sec->exp);
 			sec = sec->next;
 		}
 		else {
-			//항의 지수가 동일한 경우: 계수의 합을 가지는 항 추가
 			sum_coef = sec->coef + fir->coef;
 			if ((sum_coef != 0) && (fir->exp != 0)) //계수의 합이 0이 아니고 차수가 0이 아닌 경우
 				appendTerm(rst, sum_coef, fir->exp);
@@ -79,13 +75,13 @@ int main(){
 
 
 	int c, e,N,M;
-	scanf("%d", &N);
+	scanf("%d", &N);getchar();
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &c);
 		scanf("%d", &e);
 		appendTerm(list1, c, e);
 	}
-	scanf("%d", &M);
+	scanf("%d", &M);getchar();
 	for (int i = 0; i < M; i++) {
 		scanf("%d", &c);
 		scanf("%d", &e);

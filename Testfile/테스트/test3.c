@@ -2,6 +2,11 @@
 #include<string.h>
 #include<stdlib.h>
 
+typedef struct node {
+	int data;
+	struct node* next;
+}listnode;
+
 int main(){
     //순환문이용
     int n; scanf("%d",&n);

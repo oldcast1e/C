@@ -2,6 +2,11 @@
 #include<string.h>
 #include<stdlib.h>
 
+typedef struct node {
+	int data;
+	struct node* next;
+}listnode;
+
 int main(){
     //순환문이용
     int n; scanf("%d",&n);
@@ -22,13 +27,3 @@ int main(){
 
 
 } 
-/*
-if(same == len_small){
-        printf("rst= %d\n",0);
-    }
-    else printf("rst= %d\n",etc);
-    // rst = (same == len_small)?0:etc;
-    // printf("rst= %d\n",rst);
-    // return rst;
-    return 0;
-*/
