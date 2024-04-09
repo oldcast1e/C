@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/5주차/문제1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _appendTerm, symObjAddr: 0x0, symBinAddr: 0x100003ABC, symSize: 0x88 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _appendTerm, symObjAddr: 0x0, symBinAddr: 0x100003ABC, symSize: 0x88 }
+  - { offsetInCU: 0xD8, offset: 0xD8, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x88, symBinAddr: 0x100003B44, symSize: 0x80 }
+  - { offsetInCU: 0x10A, offset: 0x10A, size: 0x8, addend: 0x0, symName: _addPoly, symObjAddr: 0x108, symBinAddr: 0x100003BC4, symSize: 0x220 }
+  - { offsetInCU: 0x178, offset: 0x178, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x328, symBinAddr: 0x100003DE4, symSize: 0x188 }
+...

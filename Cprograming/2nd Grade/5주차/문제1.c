@@ -8,7 +8,6 @@ typedef struct node {
 }listnode;
 
 void appendTerm(listnode* list,int c,int e) {
-	
 	listnode* new = (listnode*)malloc(sizeof(listnode));
 	new->coef = c;
 	new->exp = e;
