@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
+
 int main(){
     //순환문이용
     int n; scanf("%d",&n);
