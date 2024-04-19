@@ -2,8 +2,6 @@
 #include<string.h>
 #include<stdlib.h>
 
-
-
 int count(char *arr,char c, int k, int *cnt){
     if(k >= 0){
         if(arr[k] == c) *cnt += 1;

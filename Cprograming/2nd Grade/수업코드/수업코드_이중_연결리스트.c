@@ -164,29 +164,29 @@ int main() {
    insert(&DList, DList.count + 1, 100); print(&DList);
    // insert(&DList, 4, 80); print(&DList); getchar();
    
-   printf("--------------deleteFirst-------------\n");
-   deleteFirst(&DList);print(&DList);
-   deleteFirst(&DList);print(&DList);
+   // printf("--------------deleteFirst-------------\n");
    // deleteFirst(&DList);print(&DList);
+   // deleteFirst(&DList);print(&DList);
+   // // deleteFirst(&DList);print(&DList);
 
-   printf("--------------deleteLast-------------\n");
-   deleteLast(&DList);print(&DList);
-   deleteLast(&DList);print(&DList);
+   // printf("--------------deleteLast-------------\n");
    // deleteLast(&DList);print(&DList);
-   // delete(&DList, 4); print(&DList);
-   printf("--------------delete-------------\n");
-   delete(&DList, 1); print(&DList);
-   delete(&DList, DList.count ); print(&DList);
-   // delete
-   printf("-------------insertLast-----------\n");
-   insertLast(&DList, 50); print(&DList);
-   insertLast(&DList, 60); print(&DList);
+   // deleteLast(&DList);print(&DList);
+   // // deleteLast(&DList);print(&DList);
+   // // delete(&DList, 4); print(&DList);
+   // printf("--------------delete-------------\n");
+   // delete(&DList, 1); print(&DList);
+   // delete(&DList, DList.count ); print(&DList);
+   // // delete
+   // printf("-------------insertLast-----------\n");
+   // insertLast(&DList, 50); print(&DList);
+   // insertLast(&DList, 60); print(&DList);
 
-   printf("-------------delete: check return value-----------\n");
-   printf("delte list number: ");
-   int input; scanf("%d",&input);
-   printf("[%d] is deleted.\n",delete(&DList,input));
-   print(&DList);
-   
+   // printf("-------------delete: check return value-----------\n");
+   // printf("delte list number: ");
+   // int input; scanf("%d",&input);
+   // printf("[%d] is deleted.\n",delete(&DList,input));
+   // print(&DList);
+   printf("%d",DList.Head->data);
 
 }
