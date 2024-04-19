@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/복습/중간평가/기출/자료구조1/1_이진탐색트리"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003BD8, symSize: 0x48 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003BD8, symSize: 0x48 }
+  - { offsetInCU: 0xC0, offset: 0xC0, size: 0x8, addend: 0x0, symName: _findMaxElement, symObjAddr: 0x48, symBinAddr: 0x100003C20, symSize: 0x68 }
+  - { offsetInCU: 0xE8, offset: 0xE8, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0xB0, symBinAddr: 0x100003C88, symSize: 0xA8 }
+  - { offsetInCU: 0x11E, offset: 0x11E, size: 0x8, addend: 0x0, symName: _inorderTraversal, symObjAddr: 0x158, symBinAddr: 0x100003D30, symSize: 0x6C }
+  - { offsetInCU: 0x142, offset: 0x142, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1C4, symBinAddr: 0x100003D9C, symSize: 0x170 }
+...
