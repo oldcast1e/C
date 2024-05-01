@@ -12,7 +12,6 @@ void printDigits(int n){
     if(n>0){
         int tmp=n,cnt = 0;
         while(tmp>0){tmp/=10;cnt++;}
-        // arr[cnt-1] = n%10; 
         printf("%d\n",n%10);
         n/=10;
         printDigits(n);
@@ -26,10 +25,6 @@ int main(){
     while(tmp>0){tmp/=10;cnt++;}
     printDigits(n);
     // for(int i=0;i<cnt;i++)printf("%d\n",arr[i]);
-
-    
-
-    
 } 
 /*
 int 범위의 정수가 입력된다고 가정하고, %d를 이용하여 입력받아 저장할 것 

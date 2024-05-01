@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-typedef char element;
+typedef int element;
 
 typedef struct CListNode {
    element data;
@@ -29,16 +29,17 @@ void insertLast(CListType* CL, element e) {
    node->data = e;
 
    if (isEmpty(CL)) {
-      CL->T = node;
+        printf("isEmpty...\n");
+      CL->T = node;//노드를 그대로 테일 노드에 서장
       node->next = CL->T;
    }
    else {
-      node->next = CL->T->next;
-      CL->T->next = node;
-      CL->T = node;
+      node->next = CL->T->next;//헤드 연결
+      CL->T->next = node;//테일 연결
+    //   CL->T = node;
    }
    CL->size++;
-
+    printf("[%d]=> ",node->data);
 }
 
 void insertFirst(CListType* CL, element e) {
@@ -127,12 +128,9 @@ element deleteFirst(CListType* CL) {
 }
 
 void print(CListType* CL) {
-   if (isEmpty(CL)) {
-      return;
-   }
-
+   if (isEmpty(CL)) return;
+   
    CListNode* p = CL->T;
-
    do {
       printf("[%c] => ", p->next->data);
       p = p->next;
@@ -145,21 +143,11 @@ int main() {
    CListType CL;
    init(&CL);
 
-   insertFirst(&CL, 'D'); print(&CL);
+   int N,K; scanf("%d %d",&N,&K);
+   for(int i=1;i<=N;i++)insertLast(&CL,i);
+   print(&CL);
 
-   insertLast(&CL, 'A'); print(&CL);
-   insertLast(&CL, 'B'); print(&CL);
-   insertLast(&CL, 'C'); print(&CL); getchar();
 
-   insertFirst(&CL, 'E'); print(&CL);
-   insertFirst(&CL, 'F'); print(&CL); getchar();
-
-   insert(&CL, 1, 'G'); print(&CL); getchar();
-   //insert(&CL, 8, 'H'); print(&CL);
-   //insert(&CL, 3, 'I'); print(&CL); getchar();
-
-   // printf("deleteLast[%c] is deleted.\n", deleteLast(&CL)); print(&CL);
-//    printf("[%c] is deleted.\n", deleteFirst(&CL)); print(&CL);
-   //  printf("deleteFirst[%c] is deleted.\n", deleteFirst(&CL)); print(&CL);
+   
 
 }

@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/Preclass/자료구조및실습/7주차/2차/문제1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003B5C, symSize: 0x20 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003B5C, symSize: 0x20 }
+  - { offsetInCU: 0xA2, offset: 0xA2, size: 0x8, addend: 0x0, symName: _insertFirst, symObjAddr: 0x20, symBinAddr: 0x100003B7C, symSize: 0x94 }
+  - { offsetInCU: 0xF0, offset: 0xF0, size: 0x8, addend: 0x0, symName: _insertLast, symObjAddr: 0xB4, symBinAddr: 0x100003C10, symSize: 0x110 }
+  - { offsetInCU: 0x13E, offset: 0x13E, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x1C4, symBinAddr: 0x100003D20, symSize: 0x104 }
+  - { offsetInCU: 0x1B6, offset: 0x1B6, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x2C8, symBinAddr: 0x100003E24, symSize: 0x80 }
+  - { offsetInCU: 0x1F6, offset: 0x1F6, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x348, symBinAddr: 0x100003EA4, symSize: 0xA0 }
+...

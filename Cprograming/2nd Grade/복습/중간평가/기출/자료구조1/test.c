@@ -10,7 +10,6 @@ void initialize(DListNode* H, DListNode* T) {
     H->next = T;
     T->prev = H;
 }
-
 void insertFirst(DListNode* H, char newColor) {
     DListNode* new = (DListNode*)malloc(sizeof(DListNode));
     new->color = newColor;
@@ -67,7 +66,6 @@ void quickSortUtil(DListNode* start, DListNode* end) {
     }
 }
 
-
 void quickSort(DListNode* H, DListNode* T) {
     quickSortUtil(H->next, T->prev);
 }
@@ -89,5 +87,4 @@ int main() {
     printf("Sorted List: ");
     printNode(H);
 
-    return 0;
 }

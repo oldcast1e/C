@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/수업코드/수업코드_큐_배열"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003BCC, symSize: 0x1C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003BCC, symSize: 0x1C }
+  - { offsetInCU: 0x65, offset: 0x65, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x1C, symBinAddr: 0x100003BE8, symSize: 0x24 }
+  - { offsetInCU: 0x8D, offset: 0x8D, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x40, symBinAddr: 0x100003C0C, symSize: 0x24 }
+  - { offsetInCU: 0xB5, offset: 0xB5, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x64, symBinAddr: 0x100003C30, symSize: 0x74 }
+  - { offsetInCU: 0xE7, offset: 0xE7, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0xD8, symBinAddr: 0x100003CA4, symSize: 0x84 }
+  - { offsetInCU: 0x11D, offset: 0x11D, size: 0x8, addend: 0x0, symName: _peek, symObjAddr: 0x15C, symBinAddr: 0x100003D28, symSize: 0x74 }
+  - { offsetInCU: 0x153, offset: 0x153, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x1D0, symBinAddr: 0x100003D9C, symSize: 0xB0 }
+  - { offsetInCU: 0x193, offset: 0x193, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x280, symBinAddr: 0x100003E4C, symSize: 0xF0 }
+...

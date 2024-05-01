@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     "/Users/apple/Desktop/C/Datastructure/Preclass/자료구조및실습/2주차/문제2v2"
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _mostOnes, symObjAddr: 0x0, symBinAddr: 0x100003D5C, symSize: 0xC4 }
-  - { offsetInCU: 0x52, offset: 0x52, size: 0x8, addend: 0x0, symName: _mostOnes, symObjAddr: 0x0, symBinAddr: 0x100003D5C, symSize: 0xC4 }
-  - { offsetInCU: 0xB2, offset: 0xB2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xC4, symBinAddr: 0x100003E20, symSize: 0x158 }
-...
