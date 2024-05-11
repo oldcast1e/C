@@ -1,0 +1,18 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/수업코드/수업코드_집합"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _getNode, symObjAddr: 0x0, symBinAddr: 0x100003510, symSize: 0x40 }
+  - { offsetInCU: 0x95, offset: 0x95, size: 0x8, addend: 0x0, symName: _getNode, symObjAddr: 0x0, symBinAddr: 0x100003510, symSize: 0x40 }
+  - { offsetInCU: 0xBD, offset: 0xBD, size: 0x8, addend: 0x0, symName: _addNode, symObjAddr: 0x40, symBinAddr: 0x100003550, symSize: 0x80 }
+  - { offsetInCU: 0x10B, offset: 0x10B, size: 0x8, addend: 0x0, symName: _isMember, symObjAddr: 0xC0, symBinAddr: 0x1000035D0, symSize: 0x88 }
+  - { offsetInCU: 0x14F, offset: 0x14F, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x148, symBinAddr: 0x100003658, symSize: 0x64 }
+  - { offsetInCU: 0x173, offset: 0x173, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x1AC, symBinAddr: 0x1000036BC, symSize: 0x120 }
+  - { offsetInCU: 0x1C1, offset: 0x1C1, size: 0x8, addend: 0x0, symName: _addLast, symObjAddr: 0x2CC, symBinAddr: 0x1000037DC, symSize: 0x98 }
+  - { offsetInCU: 0x20F, offset: 0x20F, size: 0x8, addend: 0x0, symName: _UnionSet, symObjAddr: 0x364, symBinAddr: 0x100003874, symSize: 0x1D4 }
+  - { offsetInCU: 0x270, offset: 0x270, size: 0x8, addend: 0x0, symName: _IntersectSet, symObjAddr: 0x538, symBinAddr: 0x100003A48, symSize: 0x134 }
+  - { offsetInCU: 0x2D1, offset: 0x2D1, size: 0x8, addend: 0x0, symName: _DifferenceSet, symObjAddr: 0x66C, symBinAddr: 0x100003B7C, symSize: 0xA4 }
+  - { offsetInCU: 0x324, offset: 0x324, size: 0x8, addend: 0x0, symName: _traverse, symObjAddr: 0x710, symBinAddr: 0x100003C20, symSize: 0x88 }
+  - { offsetInCU: 0x356, offset: 0x356, size: 0x8, addend: 0x0, symName: _lineprint, symObjAddr: 0x798, symBinAddr: 0x100003CA8, symSize: 0x1C }
+  - { offsetInCU: 0x36B, offset: 0x36B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x7B4, symBinAddr: 0x100003CC4, symSize: 0x1C4 }
+...

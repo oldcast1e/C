@@ -4,24 +4,17 @@
 
 
 int main(){
-    //순환문이용
-    int n; scanf("%d",&n);
-    int *num = (int *)malloc(sizeof(int)*n);
-
-    /*이중동적*/
-    int **dnum = (int **)malloc(sizeof(int*)*n);
-    for(int i=0;i<n;i++) dnum[i] = (int *)malloc(sizeof(int)*n);
-
-    for(int i=0;i<n;i++)scanf("%d",&num[i]);
-    for(int i=0;i<n;i++)printf("%d",num[i]);
-
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++)printf("%d ",dnum[i][j]);
-        printf("\n"); cnt++;
+    char str[1000];
+    // gets(str); 
+    scanf("%[^\n]s", str);
+    int cnt = 0;
+    for(int i=0;i<strlen(str);i++){
+        char c = str[i];
+        // printf("%c",c);
+        if(c == '(' || c == '{' || c == '['|| c == ')' 
+            || c == '}' || c == ']') cnt ++;
     }
-
-
-
-} 
-/*
-*/
+     printf("%d",cnt);
+    
+}
+//3*{4+(2-792)/1} + [3*{4-2* (100 -7)}]

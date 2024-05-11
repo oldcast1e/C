@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-typedef int element;
+typedef char element;
 
 typedef struct Listnode {
 	int data;
@@ -27,8 +27,7 @@ void insertFirst(ListType* DList, element e) {
    new->data = e; // 새로운 노드에 값 저장
    new->next = p;// 새로운 노드의 next를 H(헤드)를 저장한 p로 연결
 
-   if (p == NULL) {DList->Head = new;}//p가 널이면 헤드-테일을 각각 new로 초기화
-   else {DList->Head = new;}//연결리스트의 헤드를 new로 설정
+   DList->Head = new;
 
    DList->size++;
 }
@@ -36,7 +35,7 @@ void insertFirst(ListType* DList, element e) {
 void insertLast(ListType* DList, element e) {
     Listnode* new = (Listnode*)malloc(sizeof(Listnode));
     Listnode* p = DList->Head;
-    while(p != NULL) {
+    while(p->next != NULL) {
         if (p->next == NULL) {
             break;
         }
@@ -44,82 +43,87 @@ void insertLast(ListType* DList, element e) {
     }
     new->data = e;
     new->next = NULL;
-    if (p == NULL) {
-        DList->Head = new;
-    }
-    else {
-        p->next = new;
-    }
+    if (p == NULL) DList->Head = new;
+    else p->next = new;
+    
     DList->size++;
 }
 
-void insert(ListType* DList, int rank, element e) {
+void insert(ListType* DList, element e, int rank) {
+    if (rank < 1 || rank > DList->size) {
+        printf("Invalid rank\n");
+        return ;
+    }
+
    Listnode* new = (Listnode*)malloc(sizeof(Listnode));
    Listnode* p = DList->Head;//임의의 노드 생성
 
    if (rank == 1) {insertFirst(DList, e);}
    else if (rank == DList->size + 1) {insertLast(DList, e);}//(맨 마지막 + 1)위치 추가
    else {
-      for (int i = 1; i < rank; i++) {p = p->next;}//원하는 위치까지 이동
-      new->data = e;//새로운 노드에 값 저장
-      new->next = p;//새로운 노드의 다음 노드를 원래 위치의 노드로 설정
-
-      DList->size++;
+      for (int i = 1; i < rank-1; i++) {p = p->next;}//원하는 위치까지 이동
+        // printf("inserting...\n");
+        new->data = e;
+        new->next = p->next;
+        p->next = new;
+        DList->size++;
    }
 }
 
-void deleteFirst(ListType* DList) {
+element deleteFirst(ListType* DList) {
     if (DList->Head == NULL) {
-        return; // 연결리스트가 비어있으면 아무것도 안 함
+        return -1; // 연결리스트가 비어있으면 아무것도 안 함
     }
-    Listnode* temp = DList->Head;
-    DList->Head = temp->next;
-    free(temp); // 삭제된 노드 메모리 해제
+    Listnode* p = DList->Head;
+    element ouput = p->data;
+    DList->Head = p->next;
+    free(p); // 삭제된 노드 메모리 해제
     DList->size--;
+
+    return ouput;
 }
 
-void deleteLast(ListType* DList) {
+element deleteLast(ListType* DList) {
     if (DList->Head == NULL) {
-        return; // 연결리스트가 비어있으면 아무것도 안 함
+        return -1; // 연결리스트가 비어있으면 아무것도 안 함
     }
     Listnode* p = DList->Head;
     Listnode* prev = NULL;
     while(p->next != NULL) {
         prev = p;
         p = p->next;
-    }
-    if (prev == NULL) {
-        DList->Head = NULL; // 리스트에 노드가 하나만 있을 때
-    }
-    else {
-        prev->next = NULL; // 마지막 노드를 삭제하기 위해 이전 노드의 다음 노드를 NULL로 설정
-    }
+    }element ouput = p->data;
+    if (prev == NULL) DList->Head = NULL; // 리스트에 노드가 하나만 있을 때
+    
+    else  prev->next = NULL; // 마지막 노드를 삭제하기 위해 이전 노드의 다음 노드를 NULL로 설정
+    
     free(p); // 삭제된 노드 메모리 해제
     DList->size--;
+    return ouput;
 }
 
-void deleteNode(ListType* DList, int rank) {
+element delete(ListType* DList, int rank) {
+    element ouput ;
     if (rank < 1 || rank > DList->size) {
         printf("Invalid rank\n");
-        return;
+        return -1;
     }
-    if (rank == 1) {
-        deleteFirst(DList);
-    }
-    else if (rank == DList->size) {
-        deleteLast(DList);
-    }
+    if (rank == 1) deleteFirst(DList);
+    
+    else if (rank == DList->size) deleteLast(DList);
+    
     else {
         Listnode* p = DList->Head;
         Listnode* prev = NULL;
         for (int i = 1; i < rank; i++) {
             prev = p;
             p = p->next;
-        }
+        }ouput = p->data;
         prev->next = p->next;
         free(p); // 삭제된 노드 메모리 해제
         DList->size--;
     }
+    return ouput;
 }
 
 element getNode(ListType* DList, int rank) {
@@ -136,7 +140,7 @@ element getNode(ListType* DList, int rank) {
 
 void print(ListType* DList) {
    for (Listnode* p = DList->Head; p != NULL; p = p->next) {
-      printf("[%d] -> ", p->data);
+      printf("[%c] -> ", p->data);
    }printf("\b\b\b\b   \n");
 }
 
@@ -146,24 +150,31 @@ int main(){
     ListType DList_A,DList_B;
     init(&DList_A);init(&DList_B);
     // scanf("%d",&n);
-    n = 5;
-    srand(time(NULL));
-    for(int i=0;i<n;i++){
-        // scanf("%d",&tmp);
-        tmp = rand() % 99 + 1;
-        insert(&DList_A,i+1,tmp);
-    }
-
-    printf("Original List: ");
-    print(&DList_A);
-    deleteLast(&DList_A);
-    printf("deleting last node: ");
-    print(&DList_A);
-    deleteFirst(&DList_A);
-    printf("deleting first node: ");
-    print(&DList_A);
-   
-    return 0;
+    // n = 5;
+    // srand(time(NULL));
+    // for(int i=0;i<n;i++){
+    //     // scanf("%d",&tmp);
+    //     tmp = rand() % 99 + 1;
+    //     insert(&DList_A,i+1,tmp);
+    // }
+    printf("--------------insertFirst--------------\n");
+    insertFirst(&DList_A,'A');print(&DList_A);//printf("\n");
+    insertFirst(&DList_A,'B');print(&DList_A);//printf("\n");
+    insertFirst(&DList_A,'C');print(&DList_A);//printf("\n");
+    printf("---------------insertLast---------------\n");
+    insertLast(&DList_A,'D');print(&DList_A);//printf("\n");
+    printf("---------------insert [%d]---------------\n",2);
+    insert(&DList_A,'E',2);print(&DList_A);
+    printf("---------------insert [%d]---------------\n",4);
+    insert(&DList_A,'F',4);print(&DList_A);
+    printf("-------------deleteFirst-----------------\n");
+    deleteFirst(&DList_A);print(&DList_A);
+    printf("--------------deleteLast------------------\n");
+    deleteLast(&DList_A);print(&DList_A);
+    printf("---------------getNode--------------------\n");
+    printf("getNode[%d] = [%c]\n",1,getNode(&DList_A,1));
+    printf("getNode[%d] = [%c]\n",2,getNode(&DList_A,2));
+    printf("getNode[%d] = [%c]\n",3,getNode(&DList_A,3));
     
 
 

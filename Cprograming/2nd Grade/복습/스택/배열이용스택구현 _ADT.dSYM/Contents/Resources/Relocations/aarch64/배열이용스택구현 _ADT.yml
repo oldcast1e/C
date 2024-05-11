@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/복습/스택/배열이용스택구현 _ADT"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x0, symBinAddr: 0x100003764, symSize: 0x1C }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x0, symBinAddr: 0x100003764, symSize: 0x1C }
+  - { offsetInCU: 0x71, offset: 0x71, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x1C, symBinAddr: 0x100003780, symSize: 0x24 }
+  - { offsetInCU: 0x99, offset: 0x99, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x40, symBinAddr: 0x1000037A4, symSize: 0x24 }
+  - { offsetInCU: 0xC1, offset: 0xC1, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x64, symBinAddr: 0x1000037C8, symSize: 0x70 }
+  - { offsetInCU: 0xF3, offset: 0xF3, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0xD4, symBinAddr: 0x100003838, symSize: 0x80 }
+  - { offsetInCU: 0x129, offset: 0x129, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x154, symBinAddr: 0x1000038B8, symSize: 0x1C }
+  - { offsetInCU: 0x151, offset: 0x151, size: 0x8, addend: 0x0, symName: _top, symObjAddr: 0x170, symBinAddr: 0x1000038D4, symSize: 0x58 }
+  - { offsetInCU: 0x179, offset: 0x179, size: 0x8, addend: 0x0, symName: _peek, symObjAddr: 0x1C8, symBinAddr: 0x10000392C, symSize: 0x58 }
+  - { offsetInCU: 0x1A1, offset: 0x1A1, size: 0x8, addend: 0x0, symName: _duplicate, symObjAddr: 0x220, symBinAddr: 0x100003984, symSize: 0x6C }
+  - { offsetInCU: 0x1D3, offset: 0x1D3, size: 0x8, addend: 0x0, symName: _upRotate, symObjAddr: 0x28C, symBinAddr: 0x1000039F0, symSize: 0xEC }
+  - { offsetInCU: 0x22F, offset: 0x22F, size: 0x8, addend: 0x0, symName: _downRotate, symObjAddr: 0x378, symBinAddr: 0x100003ADC, symSize: 0xEC }
+  - { offsetInCU: 0x28B, offset: 0x28B, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x464, symBinAddr: 0x100003BC8, symSize: 0x84 }
+  - { offsetInCU: 0x2CB, offset: 0x2CB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4E8, symBinAddr: 0x100003C4C, symSize: 0x2C8 }
+...
