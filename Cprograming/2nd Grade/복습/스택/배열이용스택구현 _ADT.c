@@ -34,13 +34,13 @@ int isFull(Stack *stack){
 }
 
 void push(Stack *stack, element e){
-    if(isFull(stack)){printf("Stack FULL\n"); return ;}
+    // if(isFull(stack)){printf("Stack FULL\n"); return ;}
     stack->top ++; //스택 데이터 인덱스는 0 ~ (MAX_SIZE-1)까지임.
     stack->data[stack->top] = e;
 }
 
 element pop(Stack *stack){
-    if(isEmpty(stack)) {printf("Stack Empty\n");return -1;}
+    // if(isEmpty(stack)) {printf("Stack Empty\n");return -1;}
     element del = stack->data[stack->top];
     stack->top --;
     return del;
@@ -51,18 +51,18 @@ int size(Stack *stack){
     return stack->top + 1 ;
 }
 
-element top(Stack *stack){
-    if(isEmpty(stack)) printf("Stack Empty\n");
-    return stack->data[stack->top];
-}
+// element top(Stack *stack){
+//     if(isEmpty(stack)) printf("Stack Empty\n");
+//     return stack->data[stack->top];
+// }
 
 element peek(Stack *stack){ //top과 기능 동일
-    if(isEmpty(stack)) printf("Stack Empty\n");
+    // if(isEmpty(stack)) printf("Stack Empty\n");
     return stack->data[stack->top];
 }
 
 void duplicate(Stack *stack){
-    if(isFull(stack)){printf("Stack FULL\n"); return ;}
+    // if(isFull(stack)){printf("Stack FULL\n"); return ;}
     element dup = pop(stack);
     push(stack,dup); push(stack,dup);
 }
@@ -90,7 +90,7 @@ stack이 이미 꽉 차있으면 “Stack FULL”을 출력한다.
 */
 
 void upRotate(Stack *stack, int n){
-    if(n > stack->top){printf("Stack FULL\n"); return ;}
+    // if(n > stack->top){printf("Stack FULL\n"); return ;}
     element e = stack->data[stack->top];
     for(int i=0;i<n;i++){
         stack->data[stack->top - i] = stack->data[stack->top - i - 1];
@@ -105,7 +105,7 @@ upRotate(stack, n): stack의 맨 위 n 개의 데이터를 회전시킨다.
 */
 
 void downRotate(Stack *stack, int n){
-    if(n > stack->top){printf("Stack FULL\n"); return ;}
+    // if(n > stack->top){printf("Stack FULL\n"); return ;}
     element e = stack->data[stack->top - n + 1];
     for(int i = stack->top - n + 1 ; i<= stack->top ; i++){
         stack->data[i] = stack->data[i+1];
@@ -134,7 +134,7 @@ int main() {
     initStack(&stack);
 
     int N, M, n;
-    char input[6] = { };
+    char input[10] = { };
     char data;
     scanf("%d", &N);//stack의 크기 N
     scanf("%d", &M);//연산의 개수
@@ -150,22 +150,30 @@ int main() {
             push(&stack, data);
         }
         else if (strcmp(input, "POP") == 0) {
+            if (stack.top == -1 ) {printf("Stack Empty\n");continue;}
             data = pop(&stack);
         }
         else if (strcmp(input, "PEEK") == 0) {
+            if (stack.top == -1 ) {printf("Stack Empty\n");continue;}
             element e = peek(&stack);
             printf("%c\n",e);
         }
         else if (strcmp(input, "DUP") == 0) {
+            if (stack.top == (N-1)) {printf("Stack FULL\n");continue;}
+            if (stack.top == -1 ) {printf("Stack Empty\n");continue;}
             duplicate(&stack);
 
         }
         else if (strcmp(input, "UpR") == 0) {
+            // if (stack.top == -1 ) {printf("Stack Empty\n");continue;}
             scanf("%d", &n); getchar();
+            if (n > stack.top + 1) continue;
             upRotate(&stack, n);
         }
         else if (strcmp(input, "DownR") == 0) {
+            // if (stack.top == -1 ) {printf("Stack Empty\n");continue;}
             scanf("%d", &n);getchar();
+            if (n > stack.top + 1) continue;
             downRotate(&stack, n);
         }
         else if (strcmp(input, "PRINT") == 0) {

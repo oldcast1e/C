@@ -2,6 +2,11 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/apple/Desktop/C/Testfile/테스트/test4"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DF4, symSize: 0x178 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DF4, symSize: 0x178 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x0, symBinAddr: 0x100003C80, symSize: 0x18 }
+  - { offsetInCU: 0x82, offset: 0x82, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x0, symBinAddr: 0x100003C80, symSize: 0x18 }
+  - { offsetInCU: 0xA6, offset: 0xA6, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x18, symBinAddr: 0x100003C98, symSize: 0x24 }
+  - { offsetInCU: 0xCE, offset: 0xCE, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x3C, symBinAddr: 0x100003CBC, symSize: 0x88 }
+  - { offsetInCU: 0x10E, offset: 0x10E, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0xC4, symBinAddr: 0x100003D44, symSize: 0x88 }
+  - { offsetInCU: 0x152, offset: 0x152, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x14C, symBinAddr: 0x100003DCC, symSize: 0x88 }
+  - { offsetInCU: 0x184, offset: 0x184, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1D4, symBinAddr: 0x100003E54, symSize: 0x98 }
 ...
