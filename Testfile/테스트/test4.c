@@ -1,79 +1,150 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include  <string.h>
+
+#define N 100
 
 typedef char element;
 
-// 스택 노드 구조체 정의
-typedef struct StackNode {
-    element data;           // 데이터
-    struct StackNode* next;  // 다음 노드를 가리키는 포인터
-} StackNode;
+typedef struct StackNode
+{
+	element data;
+	struct StackNode* next;
+}StackNode;
 
-// 스택 구조체 정의
-typedef struct Stack {
-    StackNode* top;  // 스택의 최상위 노드를 가리키는 포인터
-} Stack;
+typedef struct StackType
+{
+	StackNode* top;
+}StackType;
 
-// 스택 초기화 함수
-void initStack(Stack* stack) {
-    stack->top = NULL;
+void init(StackType* S){
+    S->top = NULL;
 }
 
-// 스택이 비어있는지 확인하는 함수
-int isEmpty(Stack* stack) {
-    return stack->top == NULL;
+int isEmpty(StackType* S){
+    return S->top == NULL;
 }
 
-// 스택에 데이터를 추가하는 함수
-void push(Stack* stack, element data) {
-    StackNode* newNode = (StackNode*)malloc(sizeof(StackNode)); // 새로운 노드 동적 할당
-    if (newNode == NULL) {
-        fprintf(stderr, "메모리 할당 오류\n");
-        exit(1);
+void push(StackType* S, element e){
+    StackNode* node = (StackNode*)malloc(sizeof(StackNode));
+	node->data = e;
+	node->next = S->top;
+	S->top = node;
+}
+
+element pop(StackType* S){
+    if(isEmpty(S))
+{
+        printf("Stack Empty\n");
+        return -1;
     }
-    newNode->data = data;  // 데이터 설정
-    newNode->next = stack->top;  // 새로운 노드의 다음 노드를 현재의 top 노드로 설정
-    stack->top = newNode;  // 새로운 노드를 스택의 top으로 설정
+    
+    StackNode* p = S->top;
+	element e = p->data;
+	S->top = S->top->next;
+	free(p);
+	
+	return e;
 }
 
-// 스택에서 데이터를 제거하고 반환하는 함수
-element pop(Stack* stack) {
-    if (isEmpty(stack)) {
-        fprintf(stderr, "스택이 비어있습니다.\n");
-        exit(1);
+element peek(StackType* S){
+    if(isEmpty(S))
+{
+        printf("Stack Empty\n");
+        return -1;
     }
-    StackNode* temp = stack->top;  // 현재의 top 노드를 임시 변수에 저장
-    element data = temp->data;  // 제거할 노드의 데이터를 저장
-    stack->top = temp->next;  // top을 다음 노드로 변경
-    free(temp);  // 제거된 노드 메모리 해제
-    return data;  // 제거된 데이터 반환
+    
+    return S->top->data;
 }
 
-// 스택의 모든 데이터를 출력하는 함수
-void print(Stack* stack) {
-    printf("[스택 출력]\n");
-    StackNode* current = stack->top;  // 현재의 top 노드부터 시작
-    while (current != NULL) {
-        printf("%c ", current->data);  // 현재 노드의 데이터 출력
-        current = current->next;  // 다음 노드로 이동
+void print(StackType* S){
+    StackNode* p;  
+	for (p = S->top; p != NULL; p = p->next)
+		printf("[%c] -> ", p->data);
+	printf("NULL\n");    
+}
+
+
+int prec(char op)
+{
+   switch (op) {
+   case '(': case ')': return 0;
+   case '|': return 1;
+   case '&': return 2;
+   case '>': case '<': return 3;
+   case '+': case '-': return 4;
+   case '*': case '/': return 5;
+   case '!': return 6;
+   }
+return -1;
+}
+
+void Convert(char *Infix) {
+    StackType S;
+    init(&S);
+
+    char c;
+    int n = strlen(Infix);
+
+    for (int i = 0; i < n; i++) {
+        c = Infix[i];
+        switch (c) {
+            case '|':
+                while (!isEmpty(&S) && (prec(c) <= prec(peek(&S))) && peek(&S) != '(')
+                    printf("%c", pop(&S));
+                push(&S, c);
+                break;
+
+            case '&':
+                while (!isEmpty(&S) && (prec(c) < prec(peek(&S))) && peek(&S) != '(')
+                    printf("%c", pop(&S));
+                push(&S, c);
+                break;
+
+            case '!':
+                push(&S, c);
+                break;
+
+            case '(':
+                push(&S, c);
+                break;
+
+            case ')':
+                while (peek(&S) != '(' && !isEmpty(&S)) {
+                    printf("%c", pop(&S));
+                }
+                pop(&S); // '(' 제거
+                break;
+
+            default:
+                printf("%c", c);
+                break;
+        }
+    }
+
+    while (!isEmpty(&S)) {
+        printf("%c", pop(&S));
     }
     printf("\n");
 }
 
-int main() {
-    Stack stack;
-    initStack(&stack);
 
-    push(&stack, 'A');
-    push(&stack, 'B');
-    push(&stack, 'C');
-    push(&stack, 'D');
 
-    print(&stack);
 
-    printf("스택에서 제거된 데이터: %c\n", pop(&stack));
+int main(){
+    char infix[N];//크기가 MAX_STACK_SIZE인 배열을 선언
+    printf("Input Infix Expre : ");
+    scanf("%s", infix);//문자열을 입력받고
+    Convert(infix);
 
-    print(&stack);
+
+    // int n;scanf("%d",&n);
+    // for(int i=0;i<n;i++){
+    //     infix[0] = '\0';
+    //     scanf("%s", infix);//문자열을 입력받고
+    //     getchar();
+    //     Convert(infix);
+    // }
 
     return 0;
 }
