@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/수업코드/덱/수업코드_덱_리스트_문제_반영"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003880, symSize: 0x28 }
+  - { offsetInCU: 0x95, offset: 0x95, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003880, symSize: 0x28 }
+  - { offsetInCU: 0xB9, offset: 0xB9, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x28, symBinAddr: 0x1000038A8, symSize: 0x24 }
+  - { offsetInCU: 0xE1, offset: 0xE1, size: 0x8, addend: 0x0, symName: _add_front, symObjAddr: 0x4C, symBinAddr: 0x1000038CC, symSize: 0xA8 }
+  - { offsetInCU: 0x121, offset: 0x121, size: 0x8, addend: 0x0, symName: _add_rear, symObjAddr: 0xF4, symBinAddr: 0x100003974, symSize: 0xA8 }
+  - { offsetInCU: 0x161, offset: 0x161, size: 0x8, addend: 0x0, symName: _delete_front, symObjAddr: 0x19C, symBinAddr: 0x100003A1C, symSize: 0xC0 }
+  - { offsetInCU: 0x1A5, offset: 0x1A5, size: 0x8, addend: 0x0, symName: _delete_rear, symObjAddr: 0x25C, symBinAddr: 0x100003ADC, symSize: 0xC0 }
+  - { offsetInCU: 0x1E9, offset: 0x1E9, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x31C, symBinAddr: 0x100003B9C, symSize: 0xA8 }
+  - { offsetInCU: 0x21B, offset: 0x21B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3C4, symBinAddr: 0x100003C44, symSize: 0x228 }
+...

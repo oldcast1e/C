@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/1학기/10주차/과정/2번/2v1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000038A8, symSize: 0x1C }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000038A8, symSize: 0x1C }
+  - { offsetInCU: 0x6C, offset: 0x6C, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x1C, symBinAddr: 0x1000038C4, symSize: 0x24 }
+  - { offsetInCU: 0x94, offset: 0x94, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x40, symBinAddr: 0x1000038E8, symSize: 0x24 }
+  - { offsetInCU: 0xBC, offset: 0xBC, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x64, symBinAddr: 0x10000390C, symSize: 0x38 }
+  - { offsetInCU: 0xEE, offset: 0xEE, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0x9C, symBinAddr: 0x100003944, symSize: 0x3C }
+  - { offsetInCU: 0x124, offset: 0x124, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0xD8, symBinAddr: 0x100003980, symSize: 0x1C }
+  - { offsetInCU: 0x14C, offset: 0x14C, size: 0x8, addend: 0x0, symName: _peek, symObjAddr: 0xF4, symBinAddr: 0x10000399C, symSize: 0x20 }
+  - { offsetInCU: 0x174, offset: 0x174, size: 0x8, addend: 0x0, symName: _duplicate, symObjAddr: 0x114, symBinAddr: 0x1000039BC, symSize: 0x40 }
+  - { offsetInCU: 0x1A6, offset: 0x1A6, size: 0x8, addend: 0x0, symName: _upRotate, symObjAddr: 0x154, symBinAddr: 0x1000039FC, symSize: 0xB8 }
+  - { offsetInCU: 0x202, offset: 0x202, size: 0x8, addend: 0x0, symName: _downRotate, symObjAddr: 0x20C, symBinAddr: 0x100003AB4, symSize: 0xB8 }
+  - { offsetInCU: 0x25E, offset: 0x25E, size: 0x8, addend: 0x0, symName: _order, symObjAddr: 0x2C4, symBinAddr: 0x100003B6C, symSize: 0x80 }
+  - { offsetInCU: 0x286, offset: 0x286, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x35C, symBinAddr: 0x100003C04, symSize: 0x84 }
+  - { offsetInCU: 0x2C6, offset: 0x2C6, size: 0x8, addend: 0x0, symName: _calculate, symObjAddr: 0x3E0, symBinAddr: 0x100003C88, symSize: 0x1E4 }
+  - { offsetInCU: 0x35A, offset: 0x35A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x5C4, symBinAddr: 0x100003E6C, symSize: 0xD0 }
+...
