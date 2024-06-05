@@ -47,6 +47,7 @@ element pop(Stack* stack) {
     }
     StackNode* temp = stack->top;  // 현재의 top 노드를 임시 변수에 저장
     element data = temp->data;  // 제거할 노드의 데이터를 저장
+    
     stack->top = temp->next;  // top을 다음 노드로 변경
     free(temp);  // 제거된 노드 메모리 해제
     return data;  // 제거된 데이터 반환

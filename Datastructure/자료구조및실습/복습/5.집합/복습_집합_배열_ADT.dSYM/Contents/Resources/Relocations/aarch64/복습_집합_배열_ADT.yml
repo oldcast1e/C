@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/자료구조및실습/복습/5.집합/복습_집합_배열_ADT"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _initSet, symObjAddr: 0x0, symBinAddr: 0x100003650, symSize: 0x40 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _initSet, symObjAddr: 0x0, symBinAddr: 0x100003650, symSize: 0x40 }
+  - { offsetInCU: 0x71, offset: 0x71, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x40, symBinAddr: 0x100003690, symSize: 0x18 }
+  - { offsetInCU: 0x99, offset: 0x99, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x58, symBinAddr: 0x1000036A8, symSize: 0x24 }
+  - { offsetInCU: 0xC1, offset: 0xC1, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x7C, symBinAddr: 0x1000036CC, symSize: 0x2C }
+  - { offsetInCU: 0xE9, offset: 0xE9, size: 0x8, addend: 0x0, symName: _elements, symObjAddr: 0xA8, symBinAddr: 0x1000036F8, symSize: 0x18 }
+  - { offsetInCU: 0x111, offset: 0x111, size: 0x8, addend: 0x0, symName: _isMember, symObjAddr: 0xC0, symBinAddr: 0x100003710, symSize: 0x88 }
+  - { offsetInCU: 0x163, offset: 0x163, size: 0x8, addend: 0x0, symName: _subset, symObjAddr: 0x148, symBinAddr: 0x100003798, symSize: 0xE0 }
+  - { offsetInCU: 0x1DF, offset: 0x1DF, size: 0x8, addend: 0x0, symName: _addElem, symObjAddr: 0x228, symBinAddr: 0x100003878, symSize: 0x38 }
+  - { offsetInCU: 0x211, offset: 0x211, size: 0x8, addend: 0x0, symName: _removeElem, symObjAddr: 0x260, symBinAddr: 0x1000038B0, symSize: 0xEC }
+  - { offsetInCU: 0x27B, offset: 0x27B, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x34C, symBinAddr: 0x10000399C, symSize: 0x88 }
+  - { offsetInCU: 0x2BB, offset: 0x2BB, size: 0x8, addend: 0x0, symName: _UnionSet, symObjAddr: 0x3D4, symBinAddr: 0x100003A24, symSize: 0x290 }
+  - { offsetInCU: 0x2FF, offset: 0x2FF, size: 0x8, addend: 0x0, symName: _randAdd, symObjAddr: 0x664, symBinAddr: 0x100003CB4, symSize: 0xC0 }
+  - { offsetInCU: 0x34D, offset: 0x34D, size: 0x8, addend: 0x0, symName: _upSort, symObjAddr: 0x724, symBinAddr: 0x100003D74, symSize: 0x104 }
+  - { offsetInCU: 0x3C5, offset: 0x3C5, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x828, symBinAddr: 0x100003E78, symSize: 0xC8 }
+...

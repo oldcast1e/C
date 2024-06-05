@@ -2,17 +2,13 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/1학기/14주차/14주차_실습문제2V2"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003980, symSize: 0x8C }
-  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003980, symSize: 0x8C }
-  - { offsetInCU: 0xE5, offset: 0xE5, size: 0x8, addend: 0x0, symName: _preOrder, symObjAddr: 0x8C, symBinAddr: 0x100003A0C, symSize: 0x6C }
-  - { offsetInCU: 0x109, offset: 0x109, size: 0x8, addend: 0x0, symName: _inOrder, symObjAddr: 0xF8, symBinAddr: 0x100003A78, symSize: 0x6C }
-  - { offsetInCU: 0x12D, offset: 0x12D, size: 0x8, addend: 0x0, symName: _postOrder, symObjAddr: 0x164, symBinAddr: 0x100003AE4, symSize: 0x6C }
-  - { offsetInCU: 0x151, offset: 0x151, size: 0x8, addend: 0x0, symName: _elementNode, symObjAddr: 0x1D0, symBinAddr: 0x100003B50, symSize: 0x18 }
-  - { offsetInCU: 0x179, offset: 0x179, size: 0x8, addend: 0x0, symName: _leftChild, symObjAddr: 0x1E8, symBinAddr: 0x100003B68, symSize: 0x18 }
-  - { offsetInCU: 0x1A1, offset: 0x1A1, size: 0x8, addend: 0x0, symName: _rightChild, symObjAddr: 0x200, symBinAddr: 0x100003B80, symSize: 0x18 }
-  - { offsetInCU: 0x1C9, offset: 0x1C9, size: 0x8, addend: 0x0, symName: _isInternal, symObjAddr: 0x218, symBinAddr: 0x100003B98, symSize: 0x50 }
-  - { offsetInCU: 0x1F1, offset: 0x1F1, size: 0x8, addend: 0x0, symName: _isExternal, symObjAddr: 0x268, symBinAddr: 0x100003BE8, symSize: 0x50 }
-  - { offsetInCU: 0x219, offset: 0x219, size: 0x8, addend: 0x0, symName: _setElement, symObjAddr: 0x2B8, symBinAddr: 0x100003C38, symSize: 0x20 }
-  - { offsetInCU: 0x24B, offset: 0x24B, size: 0x8, addend: 0x0, symName: _swapElements, symObjAddr: 0x2D8, symBinAddr: 0x100003C58, symSize: 0x3C }
-  - { offsetInCU: 0x28B, offset: 0x28B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x314, symBinAddr: 0x100003C94, symSize: 0x274 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003884, symSize: 0x8C }
+  - { offsetInCU: 0x9A, offset: 0x9A, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003884, symSize: 0x8C }
+  - { offsetInCU: 0xEC, offset: 0xEC, size: 0x8, addend: 0x0, symName: _leftChild, symObjAddr: 0x8C, symBinAddr: 0x100003910, symSize: 0x18 }
+  - { offsetInCU: 0x114, offset: 0x114, size: 0x8, addend: 0x0, symName: _rightChild, symObjAddr: 0xA4, symBinAddr: 0x100003928, symSize: 0x18 }
+  - { offsetInCU: 0x13C, offset: 0x13C, size: 0x8, addend: 0x0, symName: _elementNode, symObjAddr: 0xBC, symBinAddr: 0x100003940, symSize: 0x18 }
+  - { offsetInCU: 0x164, offset: 0x164, size: 0x8, addend: 0x0, symName: _preOrder, symObjAddr: 0xD4, symBinAddr: 0x100003958, symSize: 0x6C }
+  - { offsetInCU: 0x188, offset: 0x188, size: 0x8, addend: 0x0, symName: _inOrder, symObjAddr: 0x140, symBinAddr: 0x1000039C4, symSize: 0x6C }
+  - { offsetInCU: 0x1AC, offset: 0x1AC, size: 0x8, addend: 0x0, symName: _postOrder, symObjAddr: 0x1AC, symBinAddr: 0x100003A30, symSize: 0x6C }
+  - { offsetInCU: 0x1D0, offset: 0x1D0, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x218, symBinAddr: 0x100003A9C, symSize: 0x43C }
 ...
