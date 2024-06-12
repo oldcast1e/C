@@ -4,5 +4,5 @@
 
 int main(){
     srand(time(NULL));
-    printf("%d",rand()%9);
+    printf("%d",rand()%15+1);
 }
