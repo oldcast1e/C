@@ -135,9 +135,11 @@ SetType UnionSet(SetType *S, SetType *B){
     while (i < S->size && j < B->size) {
         if (S->arr[i] < B->arr[j]) {
             addElem(&U, S->arr[i++]);
-        } else if (S->arr[i] > B->arr[j]) {
+        } 
+        else if (S->arr[i] > B->arr[j]) {
             addElem(&U, B->arr[j++]);
-        } else {
+        } 
+        else {
             addElem(&U, S->arr[i]);
             i++;
             j++;

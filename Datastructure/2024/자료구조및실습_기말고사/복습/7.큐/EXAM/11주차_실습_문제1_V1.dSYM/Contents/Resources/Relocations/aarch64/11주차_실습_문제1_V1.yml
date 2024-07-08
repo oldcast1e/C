@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/2024/자료구조및실습_기말고사/복습/7.큐/EXAM/11주차_실습_문제1_V1"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000038E0, symSize: 0x5C }
+  - { offsetInCU: 0x58, offset: 0x58, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000038E0, symSize: 0x5C }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x5C, symBinAddr: 0x10000393C, symSize: 0x24 }
+  - { offsetInCU: 0xB2, offset: 0xB2, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x80, symBinAddr: 0x100003960, symSize: 0x30 }
+  - { offsetInCU: 0xDA, offset: 0xDA, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0xB0, symBinAddr: 0x100003990, symSize: 0x90 }
+  - { offsetInCU: 0x10C, offset: 0x10C, size: 0x8, addend: 0x0, symName: _dequeue, symObjAddr: 0x140, symBinAddr: 0x100003A20, symSize: 0xD0 }
+  - { offsetInCU: 0x142, offset: 0x142, size: 0x8, addend: 0x0, symName: _frontPeek, symObjAddr: 0x210, symBinAddr: 0x100003AF0, symSize: 0x24 }
+  - { offsetInCU: 0x16A, offset: 0x16A, size: 0x8, addend: 0x0, symName: _rearPeek, symObjAddr: 0x234, symBinAddr: 0x100003B14, symSize: 0x24 }
+  - { offsetInCU: 0x192, offset: 0x192, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x258, symBinAddr: 0x100003B38, symSize: 0x18 }
+  - { offsetInCU: 0x1BA, offset: 0x1BA, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x270, symBinAddr: 0x100003B50, symSize: 0x94 }
+  - { offsetInCU: 0x1FA, offset: 0x1FA, size: 0x8, addend: 0x0, symName: _printAll, symObjAddr: 0x304, symBinAddr: 0x100003BE4, symSize: 0x88 }
+  - { offsetInCU: 0x23A, offset: 0x23A, size: 0x8, addend: 0x0, symName: _elements, symObjAddr: 0x38C, symBinAddr: 0x100003C6C, symSize: 0x18 }
+  - { offsetInCU: 0x262, offset: 0x262, size: 0x8, addend: 0x0, symName: _enqueueNum, symObjAddr: 0x3A4, symBinAddr: 0x100003C84, symSize: 0x74 }
+  - { offsetInCU: 0x2BE, offset: 0x2BE, size: 0x8, addend: 0x0, symName: _dequeueNum, symObjAddr: 0x418, symBinAddr: 0x100003CF8, symSize: 0x64 }
+  - { offsetInCU: 0x30C, offset: 0x30C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x47C, symBinAddr: 0x100003D5C, symSize: 0x1AC }
+...

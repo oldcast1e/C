@@ -1,0 +1,17 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/2024/자료구조및실습_기말고사/복습/8.트리/복습_트리_4_이진_큐"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _initQue, symObjAddr: 0x0, symBinAddr: 0x100003AA4, symSize: 0x48 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _initQue, symObjAddr: 0x0, symBinAddr: 0x100003AA4, symSize: 0x48 }
+  - { offsetInCU: 0xB7, offset: 0xB7, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x48, symBinAddr: 0x100003AEC, symSize: 0x24 }
+  - { offsetInCU: 0xDF, offset: 0xDF, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x6C, symBinAddr: 0x100003B10, symSize: 0x24 }
+  - { offsetInCU: 0x107, offset: 0x107, size: 0x8, addend: 0x0, symName: _enque, symObjAddr: 0x90, symBinAddr: 0x100003B34, symSize: 0x44 }
+  - { offsetInCU: 0x139, offset: 0x139, size: 0x8, addend: 0x0, symName: _deque, symObjAddr: 0xD4, symBinAddr: 0x100003B78, symSize: 0x50 }
+  - { offsetInCU: 0x16F, offset: 0x16F, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x124, symBinAddr: 0x100003BC8, symSize: 0x58 }
+  - { offsetInCU: 0x1C1, offset: 0x1C1, size: 0x8, addend: 0x0, symName: _preorder, symObjAddr: 0x17C, symBinAddr: 0x100003C20, symSize: 0x70 }
+  - { offsetInCU: 0x1E5, offset: 0x1E5, size: 0x8, addend: 0x0, symName: _inorder, symObjAddr: 0x1EC, symBinAddr: 0x100003C90, symSize: 0x70 }
+  - { offsetInCU: 0x209, offset: 0x209, size: 0x8, addend: 0x0, symName: _postorder, symObjAddr: 0x25C, symBinAddr: 0x100003D00, symSize: 0x70 }
+  - { offsetInCU: 0x22D, offset: 0x22D, size: 0x8, addend: 0x0, symName: _EulerTour, symObjAddr: 0x2CC, symBinAddr: 0x100003D70, symSize: 0xE8 }
+  - { offsetInCU: 0x251, offset: 0x251, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3B4, symBinAddr: 0x100003E58, symSize: 0x128 }
+...

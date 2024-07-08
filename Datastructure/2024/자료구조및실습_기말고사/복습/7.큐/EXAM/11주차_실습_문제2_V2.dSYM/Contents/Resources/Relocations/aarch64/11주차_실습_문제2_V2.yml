@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Datastructure/2024/자료구조및실습_기말고사/복습/7.큐/EXAM/11주차_실습_문제2_V2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003988, symSize: 0x28 }
+  - { offsetInCU: 0xA1, offset: 0xA1, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003988, symSize: 0x28 }
+  - { offsetInCU: 0xC5, offset: 0xC5, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x28, symBinAddr: 0x1000039B0, symSize: 0x24 }
+  - { offsetInCU: 0xED, offset: 0xED, size: 0x8, addend: 0x0, symName: _add_front, symObjAddr: 0x4C, symBinAddr: 0x1000039D4, symSize: 0xAC }
+  - { offsetInCU: 0x149, offset: 0x149, size: 0x8, addend: 0x0, symName: _add_rear, symObjAddr: 0xF8, symBinAddr: 0x100003A80, symSize: 0xCC }
+  - { offsetInCU: 0x1A5, offset: 0x1A5, size: 0x8, addend: 0x0, symName: _delete_front, symObjAddr: 0x1C4, symBinAddr: 0x100003B4C, symSize: 0x90 }
+  - { offsetInCU: 0x1DB, offset: 0x1DB, size: 0x8, addend: 0x0, symName: _delete_rear, symObjAddr: 0x254, symBinAddr: 0x100003BDC, symSize: 0xB8 }
+  - { offsetInCU: 0x23B, offset: 0x23B, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x30C, symBinAddr: 0x100003C94, symSize: 0x7C }
+  - { offsetInCU: 0x26D, offset: 0x26D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x388, symBinAddr: 0x100003D10, symSize: 0x220 }
+...

@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/수업코드/트리/6_1_수업코드_트리_모스부호"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003834, symSize: 0x58 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _table, symObjAddr: 0x718, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xDF, offset: 0xDF, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003834, symSize: 0x58 }
+  - { offsetInCU: 0x131, offset: 0x131, size: 0x8, addend: 0x0, symName: _makeMorseTree, symObjAddr: 0x58, symBinAddr: 0x10000388C, symSize: 0x1B0 }
+  - { offsetInCU: 0x1D7, offset: 0x1D7, size: 0x8, addend: 0x0, symName: _preOrder, symObjAddr: 0x208, symBinAddr: 0x100003A3C, symSize: 0x88 }
+  - { offsetInCU: 0x1FB, offset: 0x1FB, size: 0x8, addend: 0x0, symName: _printMose, symObjAddr: 0x290, symBinAddr: 0x100003AC4, symSize: 0xE8 }
+  - { offsetInCU: 0x281, offset: 0x281, size: 0x8, addend: 0x0, symName: _Decode, symObjAddr: 0x378, symBinAddr: 0x100003BAC, symSize: 0x1CC }
+  - { offsetInCU: 0x307, offset: 0x307, size: 0x8, addend: 0x0, symName: _inCode, symObjAddr: 0x544, symBinAddr: 0x100003D78, symSize: 0x168 }
+  - { offsetInCU: 0x3B7, offset: 0x3B7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x6AC, symBinAddr: 0x100003EE0, symSize: 0x6C }
+...

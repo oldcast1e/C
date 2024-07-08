@@ -9,11 +9,12 @@ typedef struct node {
 
 
 int main(){
-    int A[5];
-    int k = sizeof(A)/(int)sizeof(A[0]);
-    // printf("%d",k);
-    printf("%d",(int)sizeof(A));
+    // int A[5];
+    // int k = sizeof(A)/(int)sizeof(A[0]);
+    // // printf("%d",k);
+    // printf("%d",(int)sizeof(A));
 
-
+    char fun[3];scanf("%s",fun);
+    printf("%d",strcmp(fun,"P"));
 
 } 
