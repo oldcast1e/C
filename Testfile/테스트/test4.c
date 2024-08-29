@@ -3,6 +3,7 @@
 #include <time.h>
 
 int main(){
-    srand(time(NULL));
-    printf("%d",rand()%15+1);
+    printf("안녕!");
+    // srand(time(NULL));
+    // printf("%d",rand()%15+1);
 }
