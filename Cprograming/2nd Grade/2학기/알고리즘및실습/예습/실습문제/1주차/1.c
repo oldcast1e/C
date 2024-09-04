@@ -12,12 +12,12 @@
 ※ 순위 정보가 유효하지 않으면 화면에 에러 메시지 "invalid position"을 출력하고, 해당
 연산을 무시한다.
 */
-typedef char element;
+typedef char element; 
 
 typedef struct ListNode {
 	int data;
 	struct ListNode* next;
-}ListNode;
+}ListNode; 
 
 typedef struct ListType {
 	struct ListNode* Head;
