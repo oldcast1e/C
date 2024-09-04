@@ -1,7 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/2학기/알고리즘및실습/예습/1.기본도구/1_6_1"
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F34, symSize: 0x50 }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003F34, symSize: 0x50 }
-...
