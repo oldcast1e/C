@@ -58,17 +58,43 @@ void add_middle(ListType* list,int rank, element data){
     new->prev = tmp;
 
     tmp->next->prev = new;
-    tmp->next = new;
-
-    // printf("rank[%d] data = %c\n",rank,tmp->data);
-    
-    // new->prev = tmp->prev;
-    // new->next = tmp;
-
-    // tmp->prev->next = new;
-    // tmp->prev =  new;    
+    tmp->next = new; 
 
     list->size ++;
+}
+
+void add_rear(ListType* list, element data){
+    ListNode* new  = (ListNode*)malloc(sizeof(ListNode));
+    new->data = data;
+    list->size ++;
+
+    ListNode *tmp = list->Head;
+    while(tmp->next->next!=NULL) tmp = tmp->next;
+
+    new->next = list->Tail;
+    new->prev = tmp;
+
+    tmp->next = new;
+}
+
+void add(ListType* list,int rank, element data){
+    if(rank == 1 || list->size == 0) add_front(list,data);
+    else if(1 < rank && rank <= list->size) add_middle(list,rank,data);
+    else add_rear(list,data);
+}
+
+element delete_front(ListType* list){
+    ListNode *tmp = list->Head->next;
+    element value = tmp->data;
+
+    list->Head->next->prev = list->Head;
+    list->Head->next = list->Head->next->next;
+
+    return value;
+}
+
+void delete_middle(ListType *list, int rank){
+    
 }
 
 void print(ListType *list){
@@ -85,9 +111,17 @@ int main(){
     ListType list;
     init(&list);
 
-    add_front(&list,'A');
-    add_front(&list,'B');
-    add_front(&list,'C');
-    add_middle(&list,2,'D');
-    print(&list);
+    add(&list,1,'A');
+    add(&list,1,'B');
+    add(&list,3,'C');
+    add(&list,4,'E');
+    add(&list,2,'D');
+    // add_front(&list,'A');
+    // add_front(&list,'B');
+    // add_front(&list,'C');
+    // add_middle(&list,2,'D');
+    // add_rear(&list,'E');
+
+    printf("LIST: "); print(&list);
+    printf("[%c] is delted.\n",delete_front(&list));
 }
