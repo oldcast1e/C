@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>[##_page_title_##]</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+	<script type="text/javascript" src="./images/toc.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<style type="text/css">
+		body, input, select, textarea, button {
+			font-family: 'Noto Sans KR',sans-serif;
+		}
+
+		.toc-container {
+			background-color: #f9f9f9;
+			padding: 10px;
+			border: 1px solid #ddd;
+			margin-bottom: 20px;
+		}
+
+		.toc-container h2 {
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+
+		.toc-container ul {
+			list-style-type: none;
+			padding-left: 0;
+		}
+
+		.toc-container ul li {
+			margin-bottom: 5px;
+		}
+
+		.toc-container ul li a {
+			text-decoration: none;
+			color: #396120;
+		}
+
+		.toc-container ul li a:hover {
+			text-decoration: underline;
+		}
+	</style>
+
+	<script src="./images/jquery.toc.min.js"></script>
+</head>
+<body id="[##_body_id_##]" class="
+content-area-padding 
+cover-slider-content 
+<s_if_var_layout-width> [##_var_layout-width_##]</s_if_var_layout-width>
+<s_if_var_category-position> [##_var_category-position_##]</s_if_var_category-position>
+<s_if_var_narrow-header> narrow-header</s_if_var_narrow-header>
+<s_if_var_paging-type> [##_var_paging-type_##]</s_if_var_paging-type>
+<s_if_var_body-bg> body-bg</s_if_var_body-bg>
+<s_if_var_recent-posttype> sidebar-thumbnail-on</s_if_var_recent-posttype>
+<s_if_var_border-circle> border-circle</s_if_var_border-circle>
+<s_if_var_list-type> [##_var_list-type_##]</s_if_var_list-type>
+<s_if_var_place-thumbnail-holder> place-thumbnail</s_if_var_place-thumbnail-holder>
+<s_if_var_mobile-no-header> mobile-no-header</s_if_var_mobile-no-header>
+<s_if_var_sidebar-swap> sidebar-swap</s_if_var_sidebar-swap>"
+<s_if_var_background-color> style="background-color:[##_var_background-color_##]"</s_if_var_background-color> 
+<s_if_var_cover-slider-type> data-cover-slider-type="[##_var_cover-slider-type_##]"</s_if_var_cover-slider-type>
+<s_if_var_cover-slider-interval> data-cover-slider-interval="[##_var_cover-slider-interval_##]"</s_if_var_cover-slider-interval>
+>
+<!-- 드래그 금지 시작 --> <!-- 드래그 금지 끝 -->
+
+<s_t3>
+<div id="acc-nav">
+	<a href="#content">본문 바로가기</a>
+</div>
+
+<div id="wrap">
+	<div class="inner">
+		<header id="header">
+			<!-- 기존 내용 -->
+		</header>
+
+		<hr>
+
+		<section class="container">
+			<div class="inner">
+				<!-- 자동 목차 시작 -->
+				<div class="toc-container">
+					<h2>목차</h2>
+					<ul id="toc"></ul>
+				</div>
+				<!-- 자동 목차 끝 -->
+
+				<!-- 기존 내용 -->
+				<article id="content">
+					<div class="inner">
+						<!-- 본문 콘텐츠 -->
+
+						<h1>제목 1</h1>
+						<p>본문 내용입니다...</p>
+
+						<h2>제목 2</h2>
+						<p>본문 내용입니다...</p>
+
+						<h3>제목 3</h3>
+						<p>본문 내용입니다...</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<!-- Footer content -->
+		</footer>
+	</div>
+
+	<s_if_var_view-btn-top>
+		<a href="#top" class="btn-top hideanim"><i class="fas fa-arrow-up"></i></a>
+	</s_if_var_view-btn-top>
+</div>
+
+<!-- 목차 생성 -->
+<script>
+    $(document).ready(function() {
+        $("#toc").toc({
+            content: "article", 
+            headings: "h1,h2,h3"
+        });
+    });
+</script>
+
+<script defer src="./images/codeblock.js"></script>
+<script src="./images/script.js"></script>
+</s_t3>
+</body>
+</html>
