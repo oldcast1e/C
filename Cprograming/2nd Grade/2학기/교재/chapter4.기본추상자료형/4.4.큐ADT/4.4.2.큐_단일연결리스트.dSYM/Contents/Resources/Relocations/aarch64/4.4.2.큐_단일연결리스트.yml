@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/2학기/교재/chapter4.기본추상자료형/4.4.큐ADT/4.4.2.큐_단일연결리스트"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000039BC, symSize: 0x6C }
+  - { offsetInCU: 0x8E, offset: 0x8E, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x1000039BC, symSize: 0x6C }
+  - { offsetInCU: 0xB2, offset: 0xB2, size: 0x8, addend: 0x0, symName: _inQue, symObjAddr: 0x6C, symBinAddr: 0x100003A28, symSize: 0xAC }
+  - { offsetInCU: 0xF2, offset: 0xF2, size: 0x8, addend: 0x0, symName: _deQue, symObjAddr: 0x118, symBinAddr: 0x100003AD4, symSize: 0xE0 }
+  - { offsetInCU: 0x144, offset: 0x144, size: 0x8, addend: 0x0, symName: _front, symObjAddr: 0x1F8, symBinAddr: 0x100003BB4, symSize: 0x68 }
+  - { offsetInCU: 0x16C, offset: 0x16C, size: 0x8, addend: 0x0, symName: _rear, symObjAddr: 0x260, symBinAddr: 0x100003C1C, symSize: 0xA0 }
+  - { offsetInCU: 0x1B0, offset: 0x1B0, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x300, symBinAddr: 0x100003CBC, symSize: 0x18 }
+  - { offsetInCU: 0x1D8, offset: 0x1D8, size: 0x8, addend: 0x0, symName: _elements, symObjAddr: 0x318, symBinAddr: 0x100003CD4, symSize: 0xA0 }
+  - { offsetInCU: 0x238, offset: 0x238, size: 0x8, addend: 0x0, symName: _printQue, symObjAddr: 0x3B8, symBinAddr: 0x100003D74, symSize: 0x90 }
+  - { offsetInCU: 0x286, offset: 0x286, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x448, symBinAddr: 0x100003E04, symSize: 0x138 }
+...

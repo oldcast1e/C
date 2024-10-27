@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/2학기/교재/chapter4.기본추상자료형/4.7.ADT응용문제/리스트/4.7.1_1.\x1C리스트응용문제"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003BBC, symSize: 0x34 }
+  - { offsetInCU: 0x89, offset: 0x89, size: 0x8, addend: 0x0, symName: _init, symObjAddr: 0x0, symBinAddr: 0x100003BBC, symSize: 0x34 }
+  - { offsetInCU: 0xAD, offset: 0xAD, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x34, symBinAddr: 0x100003BF0, symSize: 0x90 }
+  - { offsetInCU: 0xED, offset: 0xED, size: 0x8, addend: 0x0, symName: _printL, symObjAddr: 0xC4, symBinAddr: 0x100003C80, symSize: 0x98 }
+  - { offsetInCU: 0x13B, offset: 0x13B, size: 0x8, addend: 0x0, symName: _candle, symObjAddr: 0x15C, symBinAddr: 0x100003D18, symSize: 0x224 }
+  - { offsetInCU: 0x1FD, offset: 0x1FD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x380, symBinAddr: 0x100003F3C, symSize: 0x38 }
+...

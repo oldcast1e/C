@@ -94,9 +94,9 @@ void swapElements(TreeNode* v, TreeNode* w) {
 }
 
 int main(){
-    // int n; scanf("%d",&n);
+    int n; scanf("%d",&n);
     int cnt = 0;
-    int n = 1;
+    // int n = 1;
     TreeNode **node = (TreeNode **)malloc(sizeof(TreeNode*)*n);
     for(int i=0;i<n*3;i++) node[i] = (TreeNode *)malloc(sizeof(TreeNode)*n);
 
@@ -105,8 +105,11 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d %d %d",&num,&left_data,&right_data);
         if(i==0) fir_node = num;
-        node[num]->left = node[left_data]; node[left_data]->num = left_data;
-        node[num]->right = node[right_data]; node[right_data]->num = right_data;
+        node[num]->left = node[left_data]; 
+        node[left_data]->num = left_data;
+        
+        node[num]->right = node[right_data]; 
+        node[right_data]->num = right_data;
     }
 
     preOrder(node[fir_node]);
@@ -116,10 +119,12 @@ int main(){
 
 
 예) 
-5 3 9 ➜5의왼쪽자식은3,오른쪽자식은9
-3 8 15 ➜3의왼쪽자식은8,오른쪽자식은15
-8 0 2 ➜ 8의 왼쪽 자식은 없고, 오른쪽 자식은 2
-2 0 0 ➜ (이하 생략)
+9
+
+5 3 9
+3 8 15
+8 0 2
+2 0 0
 15 0 0
 9 7 10
 7 12 0
@@ -128,4 +133,11 @@ int main(){
 
 위 노드 정보에서, x에 해당하는 노드 번호를 차례로 쓰면, 
     전위(선위) 순회 결과가 된다. 5 3 8 2 15 9 7 12 10
+
+                            5
+                3                                9
+        8               15               7                10
+    0       2        0      0        12      0          0     0
+         0     0                   0     0
+
 */

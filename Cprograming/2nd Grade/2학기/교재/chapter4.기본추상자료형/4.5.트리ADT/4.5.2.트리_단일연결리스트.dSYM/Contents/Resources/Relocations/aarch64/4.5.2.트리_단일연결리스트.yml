@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/2학기/교재/chapter4.기본추상자료형/4.5.트리ADT/4.5.2.트리_단일연결리스트"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003CDC, symSize: 0x58 }
+  - { offsetInCU: 0x95, offset: 0x95, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003CDC, symSize: 0x58 }
+  - { offsetInCU: 0xE7, offset: 0xE7, size: 0x8, addend: 0x0, symName: _preOrder, symObjAddr: 0x58, symBinAddr: 0x100003D34, symSize: 0x70 }
+  - { offsetInCU: 0x10B, offset: 0x10B, size: 0x8, addend: 0x0, symName: _inOrder, symObjAddr: 0xC8, symBinAddr: 0x100003DA4, symSize: 0x70 }
+  - { offsetInCU: 0x12F, offset: 0x12F, size: 0x8, addend: 0x0, symName: _postOrder, symObjAddr: 0x138, symBinAddr: 0x100003E14, symSize: 0x70 }
+  - { offsetInCU: 0x153, offset: 0x153, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1A8, symBinAddr: 0x100003E84, symSize: 0x104 }
+...

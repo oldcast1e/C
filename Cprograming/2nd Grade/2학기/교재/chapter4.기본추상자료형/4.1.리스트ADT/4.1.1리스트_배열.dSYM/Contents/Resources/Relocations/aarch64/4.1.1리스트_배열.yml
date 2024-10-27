@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/apple/Desktop/C/Cprograming/2nd Grade/2학기/교재/chapter4.기본추상자료형/4.1.리스트ADT/4.1.1리스트_배열"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x0, symBinAddr: 0x100003D80, symSize: 0x7C }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _size, symObjAddr: 0x0, symBinAddr: 0x100003D80, symSize: 0x7C }
+  - { offsetInCU: 0xAD, offset: 0xAD, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x7C, symBinAddr: 0x100003DFC, symSize: 0x38 }
+  - { offsetInCU: 0xD5, offset: 0xD5, size: 0x8, addend: 0x0, symName: _iterator, symObjAddr: 0xB4, symBinAddr: 0x100003E34, symSize: 0x98 }
+  - { offsetInCU: 0x123, offset: 0x123, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x14C, symBinAddr: 0x100003ECC, symSize: 0x6C }
+...
