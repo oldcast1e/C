@@ -38,6 +38,9 @@
   "files.associations": {
     "*.C": "c",
     "*.c": "c",
-    "ratio": "c"
+    "ratio": "c",
+    "string.h": "c",
+    "__locale": "c",
+    "variant": "c"
   }
 }

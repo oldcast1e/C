@@ -16,19 +16,19 @@ int rbinaryFind(int *num, int left, int right ,int key){
 }
 
 int main(){
-    int n, key, result; 
-    scanf("%d %d", &n, &key);
-    int *num = (int*)malloc(sizeof(int) * n);
+    // int n, key, result; 
+    // scanf("%d %d", &n, &key);
+    // int *num = (int*)malloc(sizeof(int) * n);
     
-    for(int i = 0; i < n; i++) 
-        scanf("%d", &num[i]);
+    // for(int i = 0; i < n; i++) 
+    //     scanf("%d", &num[i]);
 
-    if(key < num[0]) 
-        result = -1; // 모든 값이 키보다 클 경우 -1 반환
-    else if(key > num[n-1]) 
-        result = n - 1; // 모든 값이 키보다 작을 경우 마지막 인덱스 반환
-    else 
-        result = rbinaryFind(num, 0, n - 1, key);
+    // if(key < num[0]) 
+    //     result = -1; // 모든 값이 키보다 클 경우 -1 반환
+    // else if(key > num[n-1]) 
+    //     result = n - 1; // 모든 값이 키보다 작을 경우 마지막 인덱스 반환
+    // else 
+    //     result = rbinaryFind(num, 0, n - 1, key);
     
-    printf(" %d", result);
+    printf(" %d", 17012687%7);
 }
