@@ -7,6 +7,54 @@
 ### 개요
 
 이 tasks.json 파일은 VS Code에서 C 및 C++ 프로그램을 빌드하고 실행하는 데 사용된다. 각 작업(Task)의 역할을 설명하고, 향후 사용 시 참고할 수 있도록 주석을 추가했다.
+기본적인 C언어 빌드 및 컴파일 기능을 사용하기 위해 아래 json 코드를 사용한다.
+
+- 현재 열려 있는 C 소스 파일을 Clang을 사용하여 컴파일하는 작업.
+- -g 옵션을 사용하여 디버깅 정보를 포함한 바이너리 파일을 생성.
+- ${file}: 현재 편집 중인 C 파일을 의미.
+- -o ${fileDirname}/${fileBasenameNoExtension}: 출력 파일을 원본 소스 파일과 동일한 디렉토리에, 확장자를 제외한 파일명으로 저장.
+- "cwd": "${workspaceRoot}": 현재 워크스페이스 디렉터리에서 작업 실행.
+- "presentation": { "clear": true } → 이전 터미널 출력을 지우고 새로 실행.
+- "group": "build" → 빌드 작업으로 분류.
+
+- 실행 결과 : 컴파일된 실행 파일(main)이 현재 파일과 동일한 디렉토리에 생성됨.
+
+```
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C build",
+      "command": "clang",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "presentation": {
+        "clear": true
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "C compile",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "group": "test",
+      "presentation": {
+        "clear": true
+      }
+    }
+  ]
+}
+
+```
 
 #### 개별 Task 설명
 
